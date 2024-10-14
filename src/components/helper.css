@@ -1,0 +1,96 @@
+.gradient-text {
+    background: linear-gradient(90deg, #089EEE 6%, #00FFD4 32%, #737BD1 96%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    display: inline-block; 
+  }
+  
+.gradient-border-box {
+    padding: 10px;
+    background: linear-gradient(45deg, #00ffcc, #0066ff);
+    border-radius: 12px;
+    display: inline-block;
+  
+    /* Create the inner box */
+    position: relative;
+  }
+  
+  .gradient-border-box::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    right: 2px;
+    bottom: 2px;
+    background: black; /* Inner content background */
+    border-radius: 10px;
+    z-index: -1;
+  }
+
+  .neonbutton{
+    width: 200px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    margin: 20px;
+    height: 55px;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+    border-radius: 30px;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    background-image: linear-gradient(to right, #25aae1, #40e495, #30dd8a, #2bb673);
+    box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
+  }
+
+  .neonbutton:hover{
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+  }
+
+  .gradient-border {
+    @apply relative p-1 rounded-xl bg-gradient-border;
+  }
+  
+  .gradient-border-inner {
+    @apply bg-white rounded-xl p-4;
+  }
+
+  .gradient-border {
+    background: linear-gradient(to right, #9333ea, #ec4899, #ef4444); 
+    padding: 2px; 
+    border-radius: 12px; 
+    position: relative;
+  }
+  
+  .gradient-border-inner {
+    background-color: white;
+    border-radius: 10px; 
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+  }
+
+  input, textarea{
+    outline: solid 0px;
+    transition: outline .2s;
+  }
+
+  input:focus, textarea:focus{
+    outline: solid rgb(151, 95, 255) 2px;
+    transition: outline .2s;
+  }
+
+  .pressablebtn:active{
+    scale: 0.95;
+    transition: scale .3s;
+  }
