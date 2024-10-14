@@ -13,31 +13,31 @@ import Notfound from "./pages/notfound/notfound";
 
 const router = createBrowserRouter([
 	{
+		path: "/callmenixsh",
+		element: <Home/>,
+	},
+	{
 		path: "/",
-		element: <Home className="bg-teal"/>,
+		element: <Navigate to="/callmenixsh" replace />,
 	},
 	{
-		path: "/home",
-		element: <Navigate to="/" replace />,
-	},
-	{
-		path: "/experience",
+		path: "/callmenixsh/experience",
 		element: <Experience />,
 	},
 	{
-		path: "/projects",
+		path: "/callmenixsh/projects",
 		element: <Projects />,
 	},
 	{
-		path: "/project",
+		path: "/callmenixsh/project",
 		element: <Navigate to="/projects" replace />,
 	},
 	{
-		path: "/minis",
+		path: "/callmenixsh/minis",
 		element: <Minis />,
 	},
 	{
-		path: "*", // Catch-all route
+		path: "*",
 		element: <Notfound />,
 	},
 ]);
