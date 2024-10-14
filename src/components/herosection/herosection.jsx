@@ -115,8 +115,8 @@ const HeroSection = () => {
       <div className="circle-center"></div>
 
       {/* Hero Content */}
-      <div className="flex flex-col items-center md:items-start md:ml-24 relative z-10 mb-10">
-        <div className="flex flex-col-reverse md:flex-row justify-center items-center md:items-end mb-2">
+      <div className="flex flex-col items-center md:items-start md:ml-24 relative z-10 mb-14 md:mb-24 lg:mb-0 transition-all duration-300">
+        <div className="flex flex-col-reverse md:flex-row justify-center items-center md:items-end mb-2 ">
           <div className="flex mt-4 flex-col items-center md:items-start ">
             <div className="flex flex-row items-end md:items-start gap-2 md:gap-0 md:flex-col">
               <div className="text-lg sm:text-2xl lg:text-3xl font-Kiwi text-nowrap transition-all duration-300">

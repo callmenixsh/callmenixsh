@@ -1,5 +1,6 @@
 {
-  "name": "my-react-app",
+  "homepage": "https://callmenixsh/github.io/callmenixsh",
+  "name": "callmenixsh",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -12,6 +13,7 @@
   "dependencies": {
     "canvas-confetti": "^1.9.3",
     "framer-motion": "^11.11.8",
+    "gh-pages": "^6.2.0",
     "gsap": "^3.12.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
