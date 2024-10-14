@@ -10,6 +10,7 @@ import Experience from "./pages/myworks/experience";
 import Minis from "./pages/myworks/minis";
 import Projects from "./pages/myworks/projects";
 import Notfound from "./pages/notfound/notfound";
+import Blogs from "./pages/blogs/blogs";
 
 const router = createBrowserRouter([
 	{
@@ -21,20 +22,24 @@ const router = createBrowserRouter([
 		element: <Navigate to="/callmenixsh" replace />,
 	},
 	{
-		path: "/callmenixsh/experience",
+		path: "/experience",
 		element: <Experience />,
 	},
 	{
-		path: "/callmenixsh/projects",
+		path: "/projects",
 		element: <Projects />,
 	},
 	{
-		path: "/callmenixsh/project",
+		path: "/project",
 		element: <Navigate to="/projects" replace />,
 	},
 	{
-		path: "/callmenixsh/minis",
+		path: "/minis",
 		element: <Minis />,
+	},
+	{
+		path: "/blogs",
+		element: <Blogs />,
 	},
 	{
 		path: "*",

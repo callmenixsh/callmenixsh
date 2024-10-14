@@ -49,7 +49,7 @@ const footer = () => {
 							</li>
 							<li>
 								<Link
-									to="/callmenixsh/projects"
+									to="/projects"
 									className=" text-xs sm:text-lg lg:text-2xl duration-200 hover:text-gradient hover:font-bold"
 								>
 									My Works
@@ -57,7 +57,7 @@ const footer = () => {
 							</li>
 							<li>
 								<Link
-									to="/callmenixsh/blog"
+									to="/blogs"
 									className=" text-xs sm:text-lg lg:text-2xl duration-200 hover:text-gradient hover:font-bold"
 								>
 									Blog

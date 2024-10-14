@@ -150,7 +150,7 @@ const Sidebar = () => {
                 </li>
                 <li>
                   <Link
-                    to="/callmenixsh/projects"
+                    to="/projects"
                     className="underline sm:text-lg lg:text-2xl duration-300 hover:text-gradient hover:font-bold"
                   >
                     My Works
@@ -158,7 +158,7 @@ const Sidebar = () => {
                 </li>
                 <li>
                   <Link
-                    to="/callmenixsh/blog"
+                    to="/blogs"
                     className="underline sm:text-lg lg:text-2xl duration-300 hover:text-gradient hover:font-bold"
                   >
                     Blog

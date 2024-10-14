@@ -30,12 +30,12 @@ const nopage = () => {
 							to="/projects"
 							className="underline text-l lg:text-2xl duration-200 hover:text-gradient hover:font-bold"
 						>
-							Work/Experience
+							My Works
 						</Link>
 					</li>
 					<li>
 						<Link
-							to="/blog"
+							to="/blogs"
 							className="underline text-l lg:text-2xl duration-200 hover:text-gradient hover:font-bold"
 						>
 							Blog
