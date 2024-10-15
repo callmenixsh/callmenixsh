@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react"; // Import useEffect
 import { Link } from "react-router-dom";
 import { FaBars, FaLinkedin, FaGithub, FaDownload } from "react-icons/fa";
-import { IoCloseSharp, IoMailOutline } from "react-icons/io5";
+import { IoCloseSharp} from "react-icons/io5";
 import { FaInstagram, FaXTwitter } from "react-icons/fa6";
 import { FiMail } from "react-icons/fi";
 import confetti from "canvas-confetti";
@@ -66,7 +66,7 @@ const Sidebar = () => {
 
       {/* Sidebar Overlay */}
       <div
-        className={`sidebar-overlay fixed inset-0 z-50 flex justify-center bg-black/50 backdrop-blur-sm transition-transform duration-300 ${
+        className={`sidebar-overlay fixed inset-0 z-50 flex justify-center bg-black/70 backdrop-blur-sm transition-transform duration-300 ${
           isOpen ? "translate-y-0" : "-translate-y-[100%]"
         }`}
       >

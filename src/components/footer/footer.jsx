@@ -8,6 +8,7 @@ import { FiMail } from "react-icons/fi";
 const footer = () => {
 	return (
 		<>
+			<p className="uppercase w-full flex justify-center font-Itim text-2xl mt-4">LEts work together</p>
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
 				<path
 					fill="none"

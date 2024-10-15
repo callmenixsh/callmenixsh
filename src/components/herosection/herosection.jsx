@@ -3,7 +3,6 @@ import MeImage from "../../assets/images/me.png";
 import "./herosection.css"; 
 
 const roles = [
-  "Graphic Designer",
   "Web Developer",
   "UI/UX Designer",
   "Programmer",
@@ -105,7 +104,7 @@ const HeroSection = () => {
   }, [roleIndex]);
 
   return (
-    <div className="relative flex items-center justify-center h-[700px] overflow-hidden">
+    <div className="relative flex items-center justify-center h-[900px] overflow-hidden">
       {/* Animated Circles */}
       <div className="circle circle-1" ref={(el) => (circlesRef.current[0] = el)}></div>
       <div className="circle circle-2" ref={(el) => (circlesRef.current[1] = el)}></div>
@@ -115,13 +114,13 @@ const HeroSection = () => {
       <div className="circle-center"></div>
 
       {/* Hero Content */}
-      <div className="flex flex-col items-center md:items-start md:ml-24 relative z-10 mb-14 md:mb-24 lg:mb-0 transition-all duration-300">
+      <div className="flex flex-col items-center md:items-start md:ml-24 relative z-10 mb-14 md:mb-24 lg:mb-0 transition-all duration-300 ">
         <div className="flex flex-col-reverse md:flex-row justify-center items-center md:items-end mb-2 ">
           <div className="flex mt-4 flex-col items-center md:items-start ">
-            <div className="flex flex-row items-end md:items-start gap-2 md:gap-0 md:flex-col">
-              <div className="text-lg sm:text-2xl lg:text-3xl font-Kiwi text-nowrap transition-all duration-300">
+            <div className="flex flex-row items-end md:items-start gap-2 md:gap-0 md:flex-col ">
+              <div className="text-lg sm:text-2xl lg:text-3xl font-Kiwi text-nowrap transition-all duration-300 ">
                 Hi, I'm
-              </div>
+              </div>  
               <div className="text-gradient text-4xl sm:text-5xl lg:text-7xl font-semibold transition-all duration-300">
                 Nishant
               </div>

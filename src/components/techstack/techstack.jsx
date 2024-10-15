@@ -1,13 +1,15 @@
-import React from 'react'
+import React from "react";
+import StretchyString from "../funstuff/rope";
 
 const techstack = () => {
-  return (
-    <section
-    className="h-[1200px] bg-black-900 text-white flex items-center justify-center border-b-4"
-  >
-    <h1 className="text-4xl">Techstack</h1>
-  </section>
-  )
-}
+	return (
+		<>
+			<StretchyString />
+			<div className="flex w-full flex-col justify-center items-center  h-[800px] border-b">
+				<p className="text-4xl mb-20">TechStack</p>
+			</div>
+		</>
+	);
+};
 
-export default techstack
+export default techstack;

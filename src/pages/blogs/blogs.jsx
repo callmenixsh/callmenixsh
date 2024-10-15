@@ -14,7 +14,7 @@ const blogs = () => {
 					<li>
 						<Link
 							to="/"
-							className="underline text-l lg:text-2xl duration-200 hover:text-gradient hover:font-bold"
+							className="underline text-lg lg:text-2xl duration-200 hover:text-gradient hover:font-bold"
 						>
 							Home
 						</Link>
@@ -22,7 +22,7 @@ const blogs = () => {
 					<li>
 						<Link
 							to="/projects"
-							className="underline text-l lg:text-2xl duration-200 hover:text-gradient hover:font-bold"
+							className="underline text-lg lg:text-2xl duration-200 hover:text-gradient hover:font-bold"
 						>
 							My Works
 						</Link>

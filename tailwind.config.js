@@ -33,6 +33,11 @@ module.exports = {
         },
         '.neon-shadow': {
           filter: 'drop-shadow(1px 1px 8px #00FFFF)',
+        },
+        '.link':{
+          color: '#2dd4bf',
+          fontFamily: ['Kiwi Maru'],
+          textDecorationLine: 'underline',
         }
       });
     },
