@@ -61,6 +61,7 @@ const about = () => {
 									- Currently i am working on a self project{" "}
 									<a
 										href="https://typeraijin.netlify.app/"
+										target="_blank"
 										className="underline text-teal-300"
 									>
 										TypeRaijin
@@ -68,6 +69,9 @@ const about = () => {
 								</li>
 								<li className="text-xs sm:text-sm lg:text-lg transition-all duration-300">
 									- I am creating other small projects to master Fullstack
+								</li>
+								<li className="text-xs sm:text-sm lg:text-lg transition-all duration-300">
+									- Doing DSA on leetcode daily
 								</li>
 								{/* <li className="sm:text-sm lg:text-lg">- I occasionally write <Link to="/blogs" className="underline text-teal-300">blogs</Link> about my journey</li> */}
 							</ul>

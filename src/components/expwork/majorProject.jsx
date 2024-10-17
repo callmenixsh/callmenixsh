@@ -1,6 +1,6 @@
 import React from "react";
 import { FaRegShareFromSquare, FaCode } from "react-icons/fa6";
-import Typeraijin from "../../assets/content/TypeRaijin.mp4";
+import Typeraijin from "../../assets/content/typeraijin.mp4";
 
 // Array to store project data
 const projects = [
