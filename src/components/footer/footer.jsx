@@ -1,14 +1,43 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import Contactme from "./contactme";
 import { FaLinkedin, FaGithub, FaDownload } from "react-icons/fa";
 import { FaInstagram, FaXTwitter } from "react-icons/fa6";
 import { FiMail } from "react-icons/fi";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-const footer = () => {
+// Register ScrollTrigger with GSAP
+gsap.registerPlugin(ScrollTrigger);
+
+const Footer = () => {
+	const textRef = useRef(null);
+
+	useEffect(() => {
+		gsap.fromTo(
+			textRef.current,
+			{ x: "-100%" },
+			{
+				x: "100%",
+				scrollTrigger: {
+					trigger: textRef.current,
+					start: "60% 60%", 
+					end: "top top",
+					scrub: 1, 
+				},
+			}
+		);
+	}, []);
+
 	return (
-		<>
-			<p className="uppercase w-full flex justify-center font-Itim text-2xl mt-4">LEts work together</p>
+		<div className="overflow-x-hidden"> {/* Main wrapper to hide overflow */}
+			<div
+				ref={textRef}
+				className="uppercase w-full flex justify-center font-Itim text-2xl mt-4 text-[5vh] opacity-50 my-[4vh]"
+			>
+				Lets work together
+			</div>
+
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
 				<path
 					fill="none"
@@ -23,9 +52,9 @@ const footer = () => {
 				/>
 			</svg>
 
-			<footer className="bg-[#0D051E]/70 text-white py-10 relative">
+			<footer className="bg-[#0D051E]/70 text-white py-10 relative overflow-hidden"> {/* Added overflow-hidden */}
 				<Contactme />
-				<div className="flex relative z-10  text-center flex-col items-center">
+				<div className="flex relative z-10 text-center flex-col items-center">
 					<div className="flex w-full justify-center items-center h-20 sm:my-10 lg:my-12 xl:my-16">
 						<h2 className="absolute text-[2.4rem] sm:text-7xl lg:text-8xl xl:text-9xl font-Koho text-nowrap overflow-hidden font-bold opacity-15 transition-all duration-300">
 							HAVE A NICE DAY
@@ -43,7 +72,7 @@ const footer = () => {
 							<li>
 								<Link
 									to="/"
-									className=" text-xs sm:text-lg lg:text-2xl duration-200 hover:text-gradient hover:font-bold"
+									className="text-xs sm:text-lg lg:text-2xl duration-200 hover:text-gradient hover:font-bold"
 								>
 									Home
 								</Link>
@@ -51,7 +80,7 @@ const footer = () => {
 							<li>
 								<Link
 									to="/projects"
-									className=" text-xs sm:text-lg lg:text-2xl duration-200 hover:text-gradient hover:font-bold"
+									className="text-xs sm:text-lg lg:text-2xl duration-200 hover:text-gradient hover:font-bold"
 								>
 									My Works
 								</Link>
@@ -59,7 +88,7 @@ const footer = () => {
 							<li>
 								<Link
 									to="/blogs"
-									className=" text-xs sm:text-lg lg:text-2xl duration-200 hover:text-gradient hover:font-bold"
+									className="text-xs sm:text-lg lg:text-2xl duration-200 hover:text-gradient hover:font-bold"
 								>
 									Blog
 								</Link>
@@ -104,15 +133,15 @@ const footer = () => {
 							<FaXTwitter className="size-6 lg:size-10 hover:text-cyan-300 hover:scale-110 transition duration-300 hover:-rotate-12 hover:neon-shadow" />
 						</a>
 					</div>
-					<div className=" flex flex-col justify-center items-center border-t lg:border-t-2 mt-5 w-11/12 xl:w-[80rem]">
+					<div className="flex flex-col justify-center items-center border-t lg:border-t-2 mt-5 w-11/12 xl:w-[80rem]">
 						<p className="mt-4 text-[.4rem] sm:text-xs">
 							© 2024 callmenixsh. All rights reserved.
 						</p>
 					</div>
 				</div>
 			</footer>
-		</>
+		</div>
 	);
 };
 
-export default footer;
+export default Footer;

@@ -11,23 +11,40 @@ import Minis from "./pages/myworks/minis";
 import Projects from "./pages/myworks/projects";
 import Notfound from "./pages/notfound/notfound";
 import Blogs from "./pages/blogs/blogs";
+import Topprojects from "./components/topprojects/topprojects";
+import ScrollToTop from "./ScrollToTop";
+
+const Layout = ({ children }) => (
+	<>
+		<ScrollToTop />
+		{children}
+	</>
+);
 
 const router = createBrowserRouter([
 	{
-		path: "/callmenixsh",
-		element: <Home/>,
-	},
-	{
 		path: "/",
-		element: <Navigate to="/callmenixsh" replace />,
+		element: (
+			<Layout>
+				<Home />
+			</Layout>
+		),
 	},
 	{
 		path: "/experience",
-		element: <Experience />,
+		element: (
+			<Layout>
+				<Experience />
+			</Layout>
+		),
 	},
 	{
 		path: "/projects",
-		element: <Projects />,
+		element: (
+			<Layout>
+				<Projects />
+			</Layout>
+		),
 	},
 	{
 		path: "/project",
@@ -35,15 +52,35 @@ const router = createBrowserRouter([
 	},
 	{
 		path: "/minis",
-		element: <Minis />,
+		element: (
+			<Layout>
+				<Minis />
+			</Layout>
+		),
 	},
 	{
 		path: "/blogs",
-		element: <Blogs />,
+		element: (
+			<Layout>
+				<Blogs />
+			</Layout>
+		),
+	},
+	{
+		path: "/test",
+		element: (
+			<Layout>
+				<Topprojects />
+			</Layout>
+		),
 	},
 	{
 		path: "*",
-		element: <Notfound />,
+		element: (
+			<Layout>
+				<Notfound />
+			</Layout>
+		),
 	},
 ]);
 

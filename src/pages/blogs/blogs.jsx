@@ -7,10 +7,12 @@ const blogs = () => {
 	return (
 		<>
 			<Sidebar />
-			<div className="flex flex-col justify-center items-center mt-24">
-				This is a long term Goal
-                For now check out 
-                <ul className="flex flex-col items-center sm:flex-row pt-3 sm:pt-6 gap-4 sm:gap-10 transition-all duration:500 ">
+			<div className="flex flex-col justify-center items-center my-40 ">
+				<div className=" text-center">
+					<p className="text-gradient font-bold">Coming Soon..</p>
+					<p>For now check out</p>
+				</div>
+				<ul className="flex flex-col items-center sm:flex-row pt-3 sm:pt-6 gap-4 sm:gap-10 transition-all duration:500 ">
 					<li>
 						<Link
 							to="/"

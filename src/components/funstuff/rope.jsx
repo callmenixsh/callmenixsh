@@ -1,12 +1,38 @@
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+// Register ScrollTrigger plugin
+gsap.registerPlugin(ScrollTrigger);
 
 const Rope = () => {
   const ropeRef = useRef(null);
   const controlPoint = { x: 600, y: 100 }; // Initial control point
 
   useEffect(() => {
+    // Set the initial path
     gsap.set(ropeRef.current, { attr: { d: pathString(controlPoint) } });
+
+    // Trigger the wobble animation on scroll into view
+    ScrollTrigger.create({
+      trigger: ropeRef.current,
+      start: "top 80%", // Trigger when the rope is 80% in the viewport
+      onEnter: () => {
+        gsap.fromTo(
+          controlPoint,
+          { x: 600, y: 50 }, // Start higher for more wobble
+          {
+            x: 600,
+            y: 100, // Settle back to the initial position
+            duration: 2,
+            ease: "elastic.out(1.2, 0.4)", // Stronger wobble effect
+            onUpdate: () => {
+              gsap.set(ropeRef.current, { attr: { d: pathString(controlPoint) } });
+            },
+          }
+        );
+      },
+    });
   }, []);
 
   const pathString = ({ x, y }) =>

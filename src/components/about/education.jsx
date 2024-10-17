@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import { IoCloseSharp } from "react-icons/io5";
 
+import StretchyString from "../funstuff/rope";
+
 const qualifications = [
 	{
 		title: "B.Tech - CSE (2022-2026)",
@@ -56,67 +58,77 @@ const EducationalQualifications = () => {
 	}, [isOpen]);
 
 	return (
-		<div className="w-full justify-center flex my-20 ">
-			<button
-				onClick={toggleMenu}
-				className={`border border-white text-white px-4 py-2 rounded-xl hover:bg-white/20 hover:scale-105 active:scale-90 transition duration-300 ${
-					isOpen ? "translate-y-[100vh]" : "translate-y-0"
-				}`}
-			>
-				Educational Qualifications
-			</button>
+		<>
+			<div className="w-full justify-center flex my-20">
+				<button
+					onClick={toggleMenu}
+					className={`border border-white text-white px-4 py-2 rounded-xl hover:bg-white/20 hover:scale-105 active:scale-90 transition duration-300 ${
+						isOpen ? "translate-y-[100vh]" : "translate-y-0"
+					}`}
+				>
+					Educational Qualifications
+				</button>
 
-			<div
-				ref={menuRef}
-				className={`fixed inset-x-0 bottom-0 bg-black/80 border-t shadow-lg z-50 rounded-t-lg max-h-[60vh] overflow-y-auto p-4 transition-transform duration-300 ease-in-out ${
-					isOpen ? "translate-y-0" : "translate-y-full"
-				}`}
-			>
-				<div className="flex flex-col gap-4 mt-10">
-					{qualifications.map((q, index) => (
-						<div key={index} className="border rounded p-5">
-							<div className="text-lg sm:text-xl lg:text-2xl transition-all duration-300">{q.title}</div>
-							<div className="text-xs sm:text-sm lg:text-lg transition-all duration-300">
-								<a href={q.instituteUrl} className="link" target="_blank" rel="noopener noreferrer">
-									{q.institute}
-								</a>
-								{q.affiliation && (
-									<span className="text-nowrap">
-										{"   "}
-										 [ affiliated with{" "}
-										<a
-											href={q.affiliation.url}
-											className="link"
-											target="_blank"
-											rel="noopener noreferrer"
-										>
-											{q.affiliation.name}
-										</a>{" "}
-										]
-									</span>
-								)}
-							</div>
-							<div className="text-sm lg:text-lg transition-all duration-300">
-								{q.status}{" "}
-								{q.resultUrl && (
+				<div
+					ref={menuRef}
+					className={`fixed inset-x-0 bottom-0 bg-black/80 border-t shadow-lg z-50 rounded-t-lg max-h-[60vh] overflow-y-auto overflow-x-hidden p-4 transition-transform duration-300 ease-in-out ${
+						isOpen ? "translate-y-0" : "translate-y-full"
+					}`}
+				>
+					<div className="flex flex-col gap-4 mt-10">
+						{qualifications.map((q, index) => (
+							<div
+								key={index}
+								className="border rounded p-5 group transition-all duration-300"
+							>
+								<div className="text-lg sm:text-xl lg:text-2xl">{q.title}</div>
+								<div className="text-xs sm:text-sm lg:text-lg mt-2 group-hover:scale-110 group-hover:translate-x-24 transition-all duration-300">
 									<a
-										href={q.resultUrl}
-										className="text-xs link"
+										href={q.instituteUrl}
+										className="link  transition-transform duration-300"
 										target="_blank"
 										rel="noopener noreferrer"
 									>
-										Detailed Result
+										{q.institute}
 									</a>
-								)}
+									{q.affiliation && (
+										<span className="text-nowrap">
+											{"   "}[ affiliated with{" "}
+											<a
+												href={q.affiliation.url}
+												className="link"
+												target="_blank"
+												rel="noopener noreferrer"
+											>
+												{q.affiliation.name}
+											</a>{" "}
+											]
+										</span>
+									)}
+								</div>
+								<div className="text-sm lg:text-lg group-hover:scale-110 group-hover:translate-x-32 transition-all duration-300">
+									{q.status}{" "}
+									{q.resultUrl && (
+										<a
+											href={q.resultUrl}
+											className="text-xs link"
+											target="_blank"
+											rel="noopener noreferrer"
+										>
+											Detailed Result
+										</a>
+									)}
+								</div>
 							</div>
-						</div>
-					))}
+						))}
+					</div>
+					<button onClick={toggleMenu}>
+						<IoCloseSharp className="absolute top-3 right-2 size-8" />
+					</button>
 				</div>
-				<button onClick={toggleMenu}>
-					<IoCloseSharp className="absolute top-3 right-2 size-8" />
-				</button>
 			</div>
-		</div>
+			<StretchyString />
+		</>
 	);
 };
 

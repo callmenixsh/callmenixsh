@@ -2,17 +2,30 @@ import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 
 const Homenav = () => {
-	const [position, setPosition] = useState({ left: 0, width: '100%', opacity: .1, backgroundColor: 'rgb(255, 255, 255)' }); 
-	const [hovering, setHovering] = useState(false); 
+	const [position, setPosition] = useState({
+		left: 0,
+		width: '100%',
+		opacity: 0.1,
+		backgroundColor: 'rgb(255, 255, 255)',
+	});
+	const [hovering, setHovering] = useState(false);
 
 	return (
-		<div className="fixed top-0 left-0 w-full flex items-center justify-center py-3 z-30 ">
-			<ul
-				className="relative bg-black/30 backdrop-blur-md flex w-fit rounded-full border border-gray-500 transition-all duration-500"
+		<div className="fixed top-0 left-0 w-full flex items-center justify-center py-3 z-30">
+			<motion.ul
+				className="relative bg-teal-900/30 backdrop-blur-md flex w-fit rounded-full border border-gray-500 transition-all duration-500"
 				onMouseLeave={() => {
 					setHovering(false);
-					setPosition({ left: 0, width: '100%', opacity: .1, backgroundColor: 'rgb(255, 255, 255)' }); 
+					setPosition({
+						left: 0,
+						width: '100%',
+						opacity: 0.1,
+						backgroundColor: 'rgb(255, 255, 255)',
+					});
 				}}
+				initial={{ y: -100, opacity: 0 }}
+				animate={{ y: 0, opacity: 1 }} 
+				transition={{ type: "spring", stiffness: 120, damping: 15 }}
 			>
 				<Tab targetId="home" setPosition={setPosition} setHovering={setHovering}>
 					Home
@@ -27,7 +40,7 @@ const Homenav = () => {
 					Contact
 				</Tab>
 				<Cursor position={position} />
-			</ul>
+			</motion.ul>
 		</div>
 	);
 };
@@ -48,11 +61,16 @@ const Tab = ({ children, targetId, setPosition, setHovering }) => {
 			onMouseEnter={() => {
 				if (ref.current) {
 					const { offsetWidth, offsetLeft } = ref.current;
-					setPosition({ left: offsetLeft, width: offsetWidth, opacity: 1, backgroundColor: 'rgba(255, 255, 255, 1)' }); // Full brightness on hover
-					setHovering(true); 
+					setPosition({
+						left: offsetLeft,
+						width: offsetWidth,
+						opacity: 1,
+						backgroundColor: 'rgba(255, 255, 255, 1)',
+					});
+					setHovering(true);
 				}
 			}}
-			className="relative z-10 cursor-pointer text-white mix-blend-difference px-2 py-2 sm:px-3  sm:py-2 lg:px-5 lg:py-3 text-xs sm:text-sm lg:text-base transition-all duration-300"
+			className="relative z-10 cursor-pointer text-white mix-blend-difference px-2 py-2 sm:px-3 sm:py-2 lg:px-5 lg:py-3 text-xs sm:text-sm lg:text-base transition-all duration-300"
 		>
 			{children}
 		</li>
@@ -61,12 +79,12 @@ const Tab = ({ children, targetId, setPosition, setHovering }) => {
 
 const Cursor = ({ position }) => (
 	<motion.li
-		className="absolute z-0 h-full rounded-full " // Smooth transitions
+		className="absolute z-0 h-full rounded-full"
 		animate={{
 			left: position.left,
 			width: position.width,
 			opacity: position.opacity,
-			backgroundColor: position.backgroundColor, // Use backgroundColor from position
+			backgroundColor: position.backgroundColor,
 		}}
 		transition={{ type: "spring", stiffness: 300, damping: 30 }}
 		style={{ top: 0 }}

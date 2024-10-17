@@ -34,17 +34,17 @@ const about = () => {
 		<>
 			<div className="w-full flex	flex-col items-center justify-center mt-24  ">
 				<div className="max-w-[1200px]">
-					<div className="flex flex-row gap-5 text-white text-2xl lg:text-4xl font-Kiwi items-center justify-center mt-16">
+					<div className="flex flex-row gap-5 text-white text-xl sm:text-2xl lg:text-4xl font-Kiwi items-center justify-center mt-16 transition-all duration-300">
 						<AiOutlineMessage className="size-8 sm:size-10 lg:size-14 " />
-						<p className="flex gap-2">
+						<div className="flex gap-2">
 							A Bit
-							<p className="text-gradient underline"> About Me</p>
-						</p>
+							<p className="text-gradient underline font-bold"> About Me</p>
+						</div>
 					</div>
 
 					<div className="flex flex-col md:flex-row justify-around mt-10 gap-10 md:gap-20 mx-8 md:mx-20">
 						<div className="flex flex-col md:w-9/12 gap-10">
-							<div className="flex flex-col text-sm sm:text-lg lg:text-xl">
+							<div className="flex flex-col text-sm sm:text-lg lg:text-xl transition-all duration-300">
 								<p>
 									Hey, I'm Nishant, an engineering student of batch (2022-26)
 									with a passion for Web Development, UI/UX designing, Video
@@ -55,9 +55,9 @@ const about = () => {
 									currently diving into the MERN stack.
 								</p>
 							</div>
-							<ul className="text-sm sm:text-lg lg:text-xl">
+							<ul className="text-sm sm:text-lg lg:text-xl transition-all duration-300">
 								What Im Upto right now :
-								<li className="sm:text-sm lg:text-lg">
+								<li className="text-xs sm:text-sm lg:text-lg transition-all duration-300">
 									- Currently i am working on a self project{" "}
 									<a
 										href="https://typeraijin.netlify.app/"
@@ -66,7 +66,7 @@ const about = () => {
 										TypeRaijin
 									</a>
 								</li>
-								<li className="sm:text-sm lg:text-lg">
+								<li className="text-xs sm:text-sm lg:text-lg transition-all duration-300">
 									- I am creating other small projects to master Fullstack
 								</li>
 								{/* <li className="sm:text-sm lg:text-lg">- I occasionally write <Link to="/blogs" className="underline text-teal-300">blogs</Link> about my journey</li> */}
