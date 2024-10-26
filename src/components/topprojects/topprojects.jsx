@@ -10,7 +10,7 @@ const TopProjects = () => {
 	return (
 		<div className="flex flex-col items-center justify-center mt-36">
 			{/* Title Section */}
-			<div className="w-[700px] lg:w-[1000px] relative flex flex-col mx-5 justify-center items-center mb-10">
+			<div className="w-full lg:w-[1000px] relative flex flex-col mx-5 justify-center items-center mb-10">
 				<div className="flex flex-row text-2xl sm:text-3xl lg:text-4xl text-white my-6 w-full justify-center underline text-cyan-400">
 					<span className="text-white">My</span>
 					<span className="text-gradient font-italic font-bold"> Work</span>
