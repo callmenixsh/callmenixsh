@@ -127,13 +127,13 @@ const Footer = () => {
 						>
 							<FaGithub className="size-6 lg:size-10 hover:text-cyan-300 hover:scale-110 transition duration-300 hover:-rotate-12 hover:neon-shadow" />
 						</a>
-						<a
+						{/* <a
 							href="https://instagram.com/callmenixsh"
 							target="_blank"
 							rel="noopener noreferrer"
 						>
 							<FaInstagram className="size-6 lg:size-10 hover:text-cyan-300 hover:scale-110 transition duration-300 hover:-rotate-12 hover:neon-shadow" />
-						</a>
+						</a> */}
 						<a
 							href="https://x.com/callmenixsh"
 							target="_blank"

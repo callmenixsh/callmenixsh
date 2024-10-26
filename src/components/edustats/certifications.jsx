@@ -1,18 +1,24 @@
 import React, { useState } from "react";
-import { motion } from "framer-motion"; // Import Framer Motion
-import FUllstack from "../../assets/images/Fullstack.jpg"; // Ensure correct path
+import { motion } from "framer-motion";
+import FUllstack from "../../assets/images/Fullstack.jpg";
+import Azure from "../../assets/images/Azure.png";
+import PowerBI from "../../assets/images/powerbi.png";
 
 const Certifications = () => {
 	const [selectedCert, setSelectedCert] = useState(null);
 
 	const certificateData = [
 		{
+			name: "Cloud Computing and Azure ",
+			company: "~ Microsoft",
+			image: Azure,
+		},
+		{
 			name: "Full-Stack Web Development",
-			company: "~ by Udemy",
+			company: "~ Udemy",
 			image: FUllstack,
 		},
-		{ name: "Coming Soon....", company: "---", image: "" },
-		{ name: "Coming Soon....", company: "---", image: "" },
+		{ name: "Power BI workshop", company: "~ HMRITM", image: PowerBI },
 	];
 
 	const handleClose = () => setSelectedCert(null);
