@@ -66,7 +66,7 @@ const TopProjects = () => {
 							Typeraijin is a fast-paced multiplayer typing game where players
 							compete to type words accurately and quickly. Developed using
 							React, Express, and Socket.io for real-time gameplay, it supports
-							two-player rooms for competitive fun.
+							upto four-player rooms for competitive fun.
 						</div>
 
 						<div className="text-sm lg:text-base flex flex-col sm:flex-row md:flex-col gap-4 justify-around md:w-5/12 w-full">

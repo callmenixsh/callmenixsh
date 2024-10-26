@@ -11,7 +11,7 @@ import Minis from "./pages/myworks/minis";
 import Projects from "./pages/myworks/projects";
 import Notfound from "./pages/notfound/notfound";
 import Blogs from "./pages/blogs/blogs";
-import Topprojects from "./components/topprojects/topprojects";
+import Test from "./components/techstack/techstack";
 import ScrollToTop from "./ScrollToTop";
 
 const Layout = ({ children }) => (
@@ -70,7 +70,7 @@ const router = createBrowserRouter([
 		path: "/test",
 		element: (
 			<Layout>
-				<Topprojects />
+				<Test />
 			</Layout>
 		),
 	},

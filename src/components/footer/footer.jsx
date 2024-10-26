@@ -21,23 +21,24 @@ const Footer = () => {
 				x: "100%",
 				scrollTrigger: {
 					trigger: textRef.current,
-					start: "60% 60%", 
+					start: "60% 60%",
 					end: "top top",
-					scrub: 1, 
+					scrub: 1,
 				},
 			}
 		);
 	}, []);
 
 	return (
-		<div className="overflow-x-hidden"> {/* Main wrapper to hide overflow */}
+		<div className="overflow-x-hidden">
+			{" "}
+			{/* Main wrapper to hide overflow */}
 			<div
 				ref={textRef}
 				className="uppercase w-full flex justify-center font-Itim text-2xl mt-4 text-[5vh] opacity-50 my-[4vh]"
 			>
 				Lets work together
 			</div>
-
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
 				<path
 					fill="none"
@@ -51,15 +52,23 @@ const Footer = () => {
 					d="M0,256L80,266.7C160,277,320,299,480,288C640,277,800,235,960,224C1120,213,1280,235,1360,245.3L1440,256L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"
 				/>
 			</svg>
-
-			<footer className="bg-[#0D051E]/70 text-white py-10 relative overflow-hidden"> {/* Added overflow-hidden */}
+			<footer className="bg-[#0D051E]/70 text-white py-10 relative overflow-hidden">
+				{" "}
+				{/* Added overflow-hidden */}
 				<Contactme />
 				<div className="flex relative z-10 text-center flex-col items-center">
 					<div className="flex w-full justify-center items-center h-20 sm:my-10 lg:my-12 xl:my-16">
 						<h2 className="absolute text-[2.4rem] sm:text-7xl lg:text-8xl xl:text-9xl font-Koho text-nowrap overflow-hidden font-bold opacity-15 transition-all duration-300">
 							HAVE A NICE DAY
 						</h2>
-						<p className="absolute text-xs sm:text-sm lg:text-lg xl:text-xl transition-all duration-300">
+						<p
+							style={{
+								textShadow:
+									"0 0 3px rgba(255, 255, 255, 0.8), 0 0 10px rgb(255, 255, 255)",
+							}}
+							className="absolute text-xs sm:text-sm lg:text-lg xl:text-xl transition-all duration-300 text-shadowdrop-shadow-[0_35px_35px_rgba(255,255,255,0.25)]
+"
+						>
 							Crafted with 🖤 by Nishant
 						</p>
 					</div>

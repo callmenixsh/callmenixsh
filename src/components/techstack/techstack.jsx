@@ -24,31 +24,17 @@ import githubIcon from "../../assets/logos/github.png";
 import netlifyIcon from "../../assets/logos/netlify.png";
 import renderIcon from "../../assets/logos/render.png";
 import githubPagesIcon from "../../assets/logos/github.png";
-import { transform } from "framer-motion";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const getTranslateX = () => {
-	const screenWidth = window.innerWidth;
-	if (screenWidth >= 1300) return "-120%";
-	if (screenWidth >= 920) return "-150%";
-	if (screenWidth >= 720) return "-180%";
-	if (screenWidth >= 620) return "-200%";
-	if (screenWidth >= 550) return "-230%";
-	if (screenWidth >= 470) return "-260%";
-	if (screenWidth >= 410) return "-300%";
-	if (screenWidth >= 380) return "-320%";
-	if (screenWidth >= 360) return "-340%";
-	if (screenWidth >= 340) return "-360%";
-	if (screenWidth >= 320) return "-380%";
-	if (screenWidth >= 300) return "-420%";
-	return "-440%";
-};
-//if you see this please tell me a better solution until then o7
-
-// console.log(getTranslateX())
-
 const Techstack = () => {
+	const getTranslateX = () => {
+		const screenWidth = window.innerWidth;
+		if (screenWidth >= 670) return "-210vw";
+		if (screenWidth > 300) return "-510vw";
+		return "-600vw";
+	};
+
 	useEffect(() => {
 		const tl = gsap.timeline({
 			scrollTrigger: {
@@ -60,157 +46,111 @@ const Techstack = () => {
 			},
 		});
 
-		// Animating #techstack
 		tl.to("#techstack", {
 			x: getTranslateX(),
-			duration: 2,
+			duration: 10,
 		});
 
 		return () => {
-			// Cleanup the ScrollTrigger instance on unmount
 			ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
 		};
 	}, []);
 
 	return (
-		<>
+		<div id="stackcontainer" className="h-full flex flex-col overflow-hidden ">
+			<div className="min-h-[10vh] text-3xl md:text-4xl text-center pt-24">
+				Tech
+				<p className="text-gradient font-bold font-italic">Stack</p>
+			</div>
+
 			<div
-				id="stackcontainer"
-				className="flex w-full flex-col justify-center overflow-visible h-screen border-b overflow-x-hidden "
+				id="techstack"
+				className="flex justify-center items-center h-[80vh] w-[600vw] md:w-[300vw] border-box overflow-hidden "
 			>
-				<div className="scale-[.8] sm:scale-[.9] md:scale-100 lg:scale-[1.1] xl:scale-[1.2]  2xl:scale-[1.15] transition-all duration-300 underline text-cyan-500">
-					{/* Title */}
-					<p className="flex flex-row text-[4vh] text-white  mb-[2vh] w-full justify-center">
-						<span>Tech</span>
-						<span className="text-gradient font-italic font-bold">Stack</span>
-					</p>
+				<div
+					id="currentstack"
+					className="flex flex-col gap-[2vh] items-center w-[200vw] md:w-[100vw]"
+				>
+					<div className="flex gap-[2vw]">
+						<Card icon={htmlIcon} label="HTML" />
+						<Card icon={cssIcon} label="CSS" />
+						<Card icon={jsIcon} label="JavaScript" />
+					</div>
 
-					{/* Tech Grid */}
-					<div
-						id="techstack"
-						className="pt-[9vh] techstack flex flex-row gap-[60vw] sm:gap-[60vw]  translate-x-[5vw]  md:translate-x-[33vw] "
-					>
-						<div className="flex flex-col gap-y-[3vh] ">
-							<div className="grid grid-cols-4 gap-[17vh] w-[40vh] ">
-								<Card icon={htmlIcon} label="HTML" />
-								<Card icon={cssIcon} label="CSS" />
-								<Card icon={jsIcon} label="JavaScript" />
-							</div>
+					<div className="flex gap-[2vw]">
+						<Card icon={mongodbIcon} label="MongoDB" />
+						<Card icon={expressIcon} label="ExpressJS" />
+						<Card icon={reactIcon} label="ReactJS" />
+						<Card icon={nodeIcon} label="NodeJS" />
+					</div>
 
-							<div className="grid grid-cols-4 gap-[17vh] w-[40vh] ">
-								<Card icon={mongodbIcon} label="MongoDB" />
-								<Card icon={expressIcon} label="ExpressJS" />
-								<Card icon={reactIcon} label="ReactJS" />
-								<Card icon={nodeIcon} label="NodeJS" />
-							</div>
+					<div className="flex gap-[2vw]">
+						<Card icon={cppIcon} label="C++" />
+						<Card icon={javaIcon} label="Java" />
+						<Card icon={mysqlIcon} label="MySQL" />
+					</div>
+				</div>
 
-							<div className="grid grid-cols-4 gap-[17vh]  w-[40vh]  ">
-								<Card icon={cppIcon} label="C++" />
-								<Card icon={javaIcon} label="Java" />
-								<Card icon={mysqlIcon} label="MySQL" />
+				<div id="lib" className="flex w-[200vw] md:w-[100vw] justify-around ">
+					<div className="flex items-center  gap-[2vw] ">
+						<VerticalText text="LIBRARIES & FRAMEWORKS" />
+						<div className="flex border-l p-[8vw] gap-[2vw] ">
+							<div className="flex flex-col  gap-[2vw] ">
+								<Card icon={gsapIcon} label="GSAP" />
+								<Card icon={bootstrapIcon} label="Bootstrap" />
+								<Card icon={tailwindIcon} label="Tailwind" />
 							</div>
+							<Card icon={framerMotionIcon} label="Framer Motion" />
 						</div>
+					</div>
 
-						{/* grid 2 */}
+					<div className="flex items-center">
+						<VerticalText text="UI/UX Design" />
+						<div className="flex flex-col  gap-[2vw] border-l p-[8vw]">
+							<Card icon={figmaIcon} label="Figma" />
+							<Card icon={canvaIcon} label="Canva" />
+						</div>
+					</div>
+				</div>
 
-						<div className="flex gap-[20vw]">
-							<div className="flex items-center ">
-								<VerticalText text=" LIBRARIES & FRAMEWORKS" />
-								<div className="flex flex-col gap-y-[3vh] h-full border-l pl-[5vh] ">
-									<div className="grid grid-cols-2 gap-[17vh] w-[20vh]">
-										<Card icon={gsapIcon} label="GSAP" />
-										<Card icon={bootstrapIcon} label="Bootstrap" />
-									</div>
+				<div id="dev" className="flex w-[200vw] md:w-[100vw] justify-around">
+					<div className="flex items-center justify-center">
+						<VerticalText text="VERSION CONTROL" />
+						<div className="flex flex-col  gap-[2vw] border-l p-[8vw]">
+							<Card icon={gitIcon} label="Git" />
+							<Card icon={githubIcon} label="GitHub" />
+						</div>
+					</div>
 
-									<div className="grid grid-cols-2 gap-[17vh]  w-[20vh]">
-										<Card icon={tailwindIcon} label="Tailwind" />
-									</div>
-
-									<div className="grid grid-cols-2 gap-[17vh] w-[20vh]">
-										<Card icon={framerMotionIcon} label="Framer Motion" />
-									</div>
-								</div>
-							</div>
-							{/* grid 3 */}
-							<div className="flex items-center ">
-								<VerticalText text="UI/UX Design" />
-								<div className="flex flex-col h-full gap-y-[3vh] border-l pl-[5vh]  ">
-									<div className="grid grid-cols-1 gap-[17vh]  w-[9vh]">
-										<Card icon={figmaIcon} label="Figma" />
-									</div>
-
-									<div className="grid grid-cols-1 gap-[17vh] w-[9vh] ">
-										<Card icon={canvaIcon} label="Canva" />
-									</div>
-
-									<div className="grid grid-cols-1 gap-[17vh] w-[9vh] ">
-										{/* maybe will add more here */}
-									</div>
-								</div>
-							</div>
-							{/* grid 4 */}
-							<div className="flex items-center ">
-								<VerticalText text="VERSION CONTROL" />
-								<div className="flex flex-col h-full gap-y-[3vh] border-l pl-[5vh]  ">
-									<div className="grid grid-cols-1 gap-[17vh]  w-[9vh]">
-										<Card icon={gitIcon} label="Git" />
-									</div>
-
-									<div className="grid grid-cols-1 gap-[17vh] w-[9vh] ">
-										<Card icon={githubIcon} label="GitHub" />
-									</div>
-
-									<div className="grid grid-cols-1 gap-[17vh] w-[9vh] ">
-										{/* maybe will add more here */}
-									</div>
-								</div>
-							</div>
-							{/* grid 5 */}
-							<div className="flex items-center  ">
-								<VerticalText text="HOSTING & DEPLOYMENT" />
-								<div className="flex flex-col h-full gap-y-[3vh]  border-l pl-[5vh] pr-64">
-									<div className="flex flex-col gap-y-8 ">
-										<div className="grid grid-cols-1 gap-[17vh] w-[9vh]">
-											<Card icon={netlifyIcon} label="Netlify" />
-										</div>
-
-										<div className="grid grid-cols-1 gap-[17vh]  w-[9vh]">
-											<Card icon={renderIcon} label="Render" />
-										</div>
-
-										<div className="grid grid-cols-1 gap-[17vh] w-[9vh]">
-											<Card icon={githubPagesIcon} label="GitHub Pages" />
-										</div>
-									</div>
-								</div>
-							</div>
+					<div className="flex items-center justify-center">
+						<VerticalText text="HOSTING & DEPLOYMENT" />
+						<div className="flex flex-col gap-[2vw] border-l p-[8vw] ">
+							<Card icon={netlifyIcon} label="Netlify" />
+							<Card icon={renderIcon} label="Render" />
+							<Card icon={githubPagesIcon} label="GitHub Pages" />
 						</div>
 					</div>
 				</div>
 			</div>
-		</>
-	);
-};
-
-const Card = ({ icon, label }) => {
-	return (
-		<div className="border-[.2vh] w-[14vh] h-[14vh] p-[1vh] rounded-[1.2vh] flex flex-col items-center justify-center text-center hover:scale-105 transition-transform duration-300 ">
-			<img
-				src={icon}
-				alt={`${label} icon`}
-				className="text-5xl mb-[1vh] w-[7vh] h-[7vh] object-contain "
-			/>
-			<p className="text-[1.5vh] text-white">{label}</p>
 		</div>
 	);
 };
 
-const VerticalText = ({ text }) => {
-	return (
-		<div className="flex -rotate-90 max-w-[10vh] items-end justify-center ">
-			<p className="text-white text-[3vh] text-nowrap font-bold">{text}</p>
-		</div>
-	);
-};
+const Card = ({ icon, label }) => (
+	<div className="flex flex-col border-[.2vw] w-[22vw] h-[22vw] md:w-[12vw] md:h-[12vw] justify-center items-center p-[2vw] rounded-[1vw] contrast-50  hover:contrast-100  transition-all duration-700">
+		<img
+			src={icon}
+			alt={`${label} icon`}
+			className="w-[10vw] h-[10vw] md:w-[6vw] md:h-[6vw] object-contain"
+		/>
+		<p className="text-[2.5vw] md:text-[1.5vw] text-nowrap">{label}</p>
+	</div>
+);
+
+const VerticalText = ({ text }) => (
+	<div className="flex -rotate-90 max-w-[12vw] items-end justify-center">
+		<p className="text-white text-[4vw] md:text-[2vw] text-nowrap ">{text}</p>
+	</div>
+);
 
 export default Techstack;

@@ -82,7 +82,7 @@ const EducationalQualifications = () => {
 								className="border rounded p-5 group transition-all duration-300"
 							>
 								<div className="text-lg sm:text-xl lg:text-2xl">{q.title}</div>
-								<div className="text-xs sm:text-sm lg:text-lg mt-2 group-hover:scale-110 group-hover:translate-x-24 transition-all duration-300">
+								<div className="text-xs sm:text-sm lg:text-lg mt-2 group-hover:scale-110 group-hover:translate-x-[10vh] transition-all duration-300">
 									<a
 										href={q.instituteUrl}
 										className="link  transition-transform duration-300"
@@ -106,7 +106,7 @@ const EducationalQualifications = () => {
 										</span>
 									)}
 								</div>
-								<div className="text-sm lg:text-lg group-hover:scale-110 group-hover:translate-x-32 transition-all duration-300">
+								<div className="text-sm lg:text-lg group-hover:scale-110 group-hover:translate-x-[14vh] transition-all duration-300">
 									{q.status}{" "}
 									{q.resultUrl && (
 										<a
