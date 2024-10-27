@@ -10,31 +10,11 @@ const about = () => {
 
 	const downloadResume = () => {
 		const link = document.createElement("a");
-		link.href = resume; // Use the imported PDF directly
-		link.download = "Nixsh_Resume.pdf"; // Provide a download name
-		document.body.appendChild(link); // Append link to the DOM
-		link.click(); // Trigger the download
-		document.body.removeChild(link); // Remove link from the DOM
-	
-		const count = 25;
-		const defaults = { origin: { y: 0 } };
-		const rect = buttonRef.current.getBoundingClientRect();
-		const x = rect.left + rect.width / 2;
-		const y = rect.top;
-	
-		for (let i = 0; i < count; i++) {
-		  confetti({
-			...defaults,
-			angle: Math.random() * 360,
-			spread: Math.random() * 300,
-			startVelocity: Math.random() * 1 + 10,
-			decay: 0.95,
-			scalar: Math.random() * 1 + 0.5,
-			origin: { x: x / window.innerWidth, y: (y + window.scrollY) / window.innerHeight },
-		  });
-		}
-	
-		setIsOpen(false); // Close the sidebar after triggering download
+		link.href = resume;
+		link.download = "Nixsh_Resume.pdf"; 
+		document.body.appendChild(link); 
+		link.click(); 
+		document.body.removeChild(link);
 	  };
 	return (
 		<>
@@ -94,7 +74,7 @@ const about = () => {
 								<p className="text-sm lg:text-lg mx-1">Want to connect?</p>
 								<div className="grid grid-cols-4 md:grid-cols-3 mt-3 gap-4">
 									<a
-										href="mailto:callmenixsh@gmail.com?subject=Portfolio Inquiry&body=Hi Nixsh,"
+										href="https://mail.google.com/mail/?view=cm&fs=1&to=callmenixsh@gmail.com&su=Subject&body=Hi%20Nixsh!"
 										target="_blank"
 										rel="noopener noreferrer"
 									>

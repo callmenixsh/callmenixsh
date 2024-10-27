@@ -107,11 +107,11 @@ const Footer = () => {
 
 					<div className="flex justify-center gap-6 mt-5">
 						<a
-							href="mailto:callmenixsh@gmail.com?subject=Portfolio Inquiry&body=Hi Nixsh,"
+							href="https://mail.google.com/mail/?view=cm&fs=1&to=callmenixsh@gmail.com&su=Subject&body=Hi%20Nixsh!"
 							target="_blank"
 							rel="noopener noreferrer"
 						>
-							<FiMail className="size-6 lg:size-10 hover:text-cyan-300 hover:scale-110 transition duration-300 hover:-rotate-12 hover:neon-shadow" />
+							<FiMail className="size-7 lg:size-12 hover:text-cyan-300 hover:scale-110 transition duration-300 hover:-rotate-12 hover:neon-shadow" />
 						</a>
 						<a
 							href="https://www.linkedin.com/in/callmenixsh/"
