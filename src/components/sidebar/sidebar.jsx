@@ -5,7 +5,6 @@ import { IoCloseSharp } from "react-icons/io5";
 import { FaInstagram, FaXTwitter } from "react-icons/fa6";
 import { FiMail } from "react-icons/fi";
 import confetti from "canvas-confetti";
-import "./sidebar.css";
 import "../helper.css";
 import resume from "../../assets/content/resume.pdf";
 
@@ -60,17 +59,17 @@ const Sidebar = () => {
 				className="sidebar-toggle absolute right-2 top-3 z-40"
 				onClick={toggleSidebar}
 			>
-				<FaBars className="sidebarOpen-btn fixed right-3 top-4 transition-all size-6 sm:size-8 lg:size-10 duration-300 hover:scale-105" />
+				<FaBars className="sidebarOpen-btn fixed right-3 top-4 transition-all size-6 sm:size-8 lg:size-10 duration-300 hover:scale-105 text-black dark:text-white" />
 			</button>
 
 			<div
-				className={`sidebar-overlay fixed inset-0 z-50 flex justify-center bg-black/70 backdrop-blur-sm transition-transform duration-300 ${
+				className={`sidebar-overlay fixed inset-0 z-50 flex justify-center bg-white/80 dark:bg-black/70 backdrop-blur-sm transition-transform duration-300 ${
 					isOpen ? "translate-y-0" : "-translate-y-[100%]"
 				}`}
 			>
-				<div className="sidebar-content h-auto flex flex-col lg:flex-row items-center justify-start gap-16 p-10 overflow-y-auto w-full max-w-7xl transition-all duration-300">
+				<div className="sidebar-content h-auto flex flex-col lg:flex-row items-center justify-start gap-16 p-10 overflow-y-auto w-full max-w-7xl transition-all duration-300 text-black dark:text-white">
 					<button className="sidebarClose-btn" onClick={toggleSidebar}>
-						<IoCloseSharp className="fixed right-1 top-2 transition-all duration-300 size-8 sm:size-12 lg:size-16 hover:scale-110 hover:rotate-[180deg]" />
+						<IoCloseSharp className="fixed right-1 top-2 transition-all duration-300 size-8 sm:size-12 lg:size-16 hover:scale-110 hover:rotate-[180deg] text-black dark:text-white" />
 					</button>
 
 					<div className="lg:w-4/6 flex flex-col gap-10 max-w-2xl lg:max-w-5xl transition-all duration-300">

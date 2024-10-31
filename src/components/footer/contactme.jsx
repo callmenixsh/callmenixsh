@@ -55,7 +55,6 @@ const ContactMe = () => {
 					body: JSON.stringify(formData),
 				});
 
-				// Debugging: Check response status
 				if (!response.ok) {
 					const errorData = await response.json();
 					console.error("Error response:", errorData);
@@ -68,12 +67,12 @@ const ContactMe = () => {
 					setName("");
 					setEmail("");
 					setMessage("");
-					setPopupVisible(true); // Show the popup on success
+					setPopupVisible(true);
 				} else {
-					setPopupVisible(false); // Hide the popup on failure
+					setPopupVisible(false); 
 				}
 			} catch (error) {
-				setPopupVisible(false); // Hide the popup on error
+				setPopupVisible(false); 
 			} finally {
 				setIsSubmitting(false);
 			}
@@ -84,7 +83,7 @@ const ContactMe = () => {
 		setPopupVisible(false);
 	};
 
-	const isFormValid = name && isValidEmail(email) && message; // Validate form fields
+	const isFormValid = name && isValidEmail(email) && message;
 
 	return (
 		<>
@@ -142,12 +141,12 @@ const ContactMe = () => {
 				`}
 			</style>
 
-			<div className="flex flex-col justify-center items-center">
-				<div className="text-gradient text-xl sm:text-3xl lg:text-4xl transition-all duration-300 font-bold">
+			<div className="flex flex-col justify-center items-center text-black dark:text-white">
+				<div className="text-gradient text-xl sm:text-3xl lg:text-4xl transition-all duration-300 font-bold drop-shadow-lg dark:drop-shadow-0">
 					GET IN TOUCH
 				</div>
 				<div className="relative rounded-xl sm:rounded-3xl px-5 sm:px-10 py-5 my-4 lg:text-lg transition-all duration-300 animated-gradient bg-opacity-40">
-					<div className="absolute inset-[2px] bg-[#110622] rounded-xl sm:rounded-3xl border-4 border-transparent bg-clip-border"></div>
+					<div className="absolute inset-[2px] bg-[#e5ddf1] dark:bg-[#110622] rounded-xl sm:rounded-3xl border-4 border-transparent bg-clip-border"></div>
 					<div className="relative z-10 ">
 						<div className="font-Itim text-xs sm:text-sm lg:text-base mb-4 transition-all duration-300">
 							To: callmenixsh@gmail.com
@@ -163,7 +162,7 @@ const ContactMe = () => {
 									value={name}
 									onChange={(e) => setName(e.target.value)}
 									placeholder="Your Name"
-									className="border bg-white/30 focus:bg-white focus:text-black text-white rounded-md px-2 sm:px-4 py-0 sm:py-1 w-24 sm:w-40 lg:w-48 h-8 sm:h-10 lg:h-12 text-black text-xs sm:text-sm lg:text-lg text-left placeholder:text-center placeholder-white focus:placeholder-gray-400 transition-all duration-300"
+									className="border border-black dark:border-white bg-white/30 focus:bg-white focus:text-black text-white rounded-md px-2 sm:px-4 py-0 sm:py-1 w-24 sm:w-40 lg:w-48 h-8 sm:h-10 lg:h-12 text-black text-xs sm:text-sm lg:text-lg text-left placeholder:text-center placeholder-gray-400 dark:placeholder-white focus:placeholder-gray-400 transition-all duration-300"
 								/>
 							</div>
 							<div className="flex flex-col items-left">
@@ -176,7 +175,7 @@ const ContactMe = () => {
 									value={email}
 									onChange={(e) => setEmail(e.target.value)}
 									placeholder="example@gmail.com"
-									className="border bg-white/30 focus:bg-white focus:text-black text-white rounded-md px-2 sm:px-4 py-1 sm:py-2 w-40 sm:w-56 lg:w-64 h-8 sm:h-10 lg:h-12 text-black text-xs sm:text-sm lg:text-lg text-left placeholder:text-center placeholder-white focus:placeholder-gray-400 transition-all duration-300"
+									className="border border-black dark:border-white bg-white/30 focus:bg-white focus:text-black text-white rounded-md px-2 sm:px-4 py-1 sm:py-2 w-40 sm:w-56 lg:w-64 h-8 sm:h-10 lg:h-12 text-black text-xs sm:text-sm lg:text-lg text-left placeholder:text-center  placeholder-gray-400 dark:placeholder-white  focus:placeholder-gray-400 transition-all duration-300"
 								/>
 							</div>
 						</div>
@@ -189,7 +188,7 @@ const ContactMe = () => {
 								value={message}
 								onChange={(e) => setMessage(e.target.value)}
 								placeholder="Your message goes here"
-								className="border bg-white/30 focus:bg-white focus:text-black text-white rounded-md px-4 py-2 text-black sm:text-sm resize-y min-h-20 sm:min-h-24 lg:min-h-28 transition-[font-size] transition-[outline] text-xs lg:text-lg placeholder-white focus:placeholder-gray-400"
+								className="border border-black dark:border-white bg-white/30 focus:bg-white focus:text-black text-white rounded-md px-4 py-2 text-black sm:text-sm resize-y min-h-20 sm:min-h-24 lg:min-h-28 transition-[font-size] transition-[outline] text-xs lg:text-lg  placeholder-gray-400 dark:placeholder-white  focus:placeholder-gray-400"
 							/>
 						</div>
 						<button 

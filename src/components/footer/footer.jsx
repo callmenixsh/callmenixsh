@@ -42,23 +42,23 @@ const Footer = () => {
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
 				<path
 					fill="none"
-					stroke="#FFFFFF"
+					stroke="teal"
 					strokeWidth="3"
 					d="M0,256L80,266.7C160,277,320,299,480,288C640,277,800,235,960,224C1120,213,1280,235,1360,245.3L1440,256"
 				/>
 				<path
-					fill="#090314"
+					fill="rgb(152, 123, 184,.2)"
 					fillOpacity="1"
 					d="M0,256L80,266.7C160,277,320,299,480,288C640,277,800,235,960,224C1120,213,1280,235,1360,245.3L1440,256L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"
 				/>
 			</svg>
-			<footer className="bg-[#0D051E]/70 text-white py-10 relative overflow-hidden">
+			<footer className=" bg-[#987bb8]/20 text-white py-10 relative overflow-hidden">
 				{" "}
 				{/* Added overflow-hidden */}
 				<Contactme />
 				<div className="flex relative z-10 text-center flex-col items-center">
 					<div className="flex w-full justify-center items-center h-20 sm:my-10 lg:my-12 xl:my-16">
-						<h2 className="absolute text-[2.4rem] sm:text-7xl lg:text-8xl xl:text-9xl font-Koho text-nowrap overflow-hidden font-bold opacity-15 transition-all duration-300">
+						<h2 className="absolute text-[2.4rem] sm:text-7xl lg:text-8xl xl:text-9xl font-Koho text-nowrap overflow-hidden font-bold opacity-15 transition-all duration-300 text-black dark:text-white">
 							HAVE A NICE DAY
 						</h2>
 						<p
@@ -66,7 +66,7 @@ const Footer = () => {
 								textShadow:
 									"0 0 3px rgba(255, 255, 255, 0.8), 0 0 10px rgb(255, 255, 255)",
 							}}
-							className="absolute text-xs sm:text-sm lg:text-lg xl:text-xl transition-all duration-300 text-shadowdrop-shadow-[0_35px_35px_rgba(255,255,255,0.25)]
+							className="invert dark:invert-0 absolute text-xs sm:text-sm lg:text-lg xl:text-xl transition-all duration-300 text-shadowdrop-shadow-[0_35px_35px_rgba(255,255,255,0.25)]
 "
 						>
 							Crafted with 🖤 by Nishant
@@ -77,7 +77,7 @@ const Footer = () => {
 						<h3 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-gradient transition-all duration-300">
 							Explore
 						</h3>
-						<ul className="flex sm:pt-4 lg:pt-6 gap-5 lg:gap-16 min-w-5 justify-center">
+						<ul className="flex sm:pt-4 lg:pt-6 gap-5 lg:gap-16 min-w-5 justify-center text-black dark:text-white">
 							<li>
 								<Link
 									to="/"
@@ -105,13 +105,13 @@ const Footer = () => {
 						</ul>
 					</div>
 
-					<div className="flex justify-center gap-6 mt-5">
+					<div className="flex justify-center gap-6 mt-5 text-black dark:text-white">
 						<a
 							href="https://mail.google.com/mail/?view=cm&fs=1&to=callmenixsh@gmail.com&su=Subject&body=Hi%20Nixsh!"
 							target="_blank"
 							rel="noopener noreferrer"
 						>
-							<FiMail className="size-7 lg:size-12 hover:text-cyan-300 hover:scale-110 transition duration-300 hover:-rotate-12 hover:neon-shadow" />
+							<FiMail className="size-6 lg:size-10 hover:text-cyan-300 hover:scale-110 transition duration-300 hover:-rotate-12 hover:neon-shadow" />
 						</a>
 						<a
 							href="https://www.linkedin.com/in/callmenixsh/"
@@ -142,7 +142,7 @@ const Footer = () => {
 							<FaXTwitter className="size-6 lg:size-10 hover:text-cyan-300 hover:scale-110 transition duration-300 hover:-rotate-12 hover:neon-shadow" />
 						</a>
 					</div>
-					<div className="flex flex-col justify-center items-center border-t lg:border-t-2 mt-5 w-11/12 xl:w-[80rem]">
+					<div className="flex flex-col justify-center items-center border-t border-black dark:border-white lg:border-t-2 mt-5 w-11/12 xl:w-[80rem] text-black dark:text-white">
 						<p className="mt-4 text-[.4rem] sm:text-xs">
 							© 2024 callmenixsh. All rights reserved.
 						</p>

@@ -7,7 +7,7 @@ const blogs = () => {
 	return (
 		<>
 			<Sidebar />
-			<div className="flex flex-col justify-center items-center my-40 ">
+			<div className="flex flex-col justify-center items-center my-40 text-black dark:text-white ">
 				<div className=" text-center">
 					<p className="text-gradient font-bold">Coming Soon..</p>
 					<p>For now check out</p>

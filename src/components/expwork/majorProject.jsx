@@ -15,7 +15,7 @@ const projects = [
 const MajorProject = () => {
 	return (
 		<div className="flex flex-col justify-center items-center my-28">
-			<h1 className="text-3xl underline pb-14">Projects</h1>
+			<h1 className="text-3xl underline pb-14 text-black dark:text-white">Projects</h1>
 
 			<div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-10 sm:mx-10">
 				{projects.map((project) => (

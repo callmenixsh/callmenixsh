@@ -11,9 +11,9 @@ const Homenav = () => {
 	const [hovering, setHovering] = useState(false);
 
 	return (
-		<div className="fixed top-0 left-0 w-full flex items-center justify-center py-3 z-30">
+		<div className="invert dark:invert-0 fixed top-0 left-0 w-full flex items-center justify-center py-3 z-30">
 			<motion.ul
-				className="relative bg-teal-900/30 backdrop-blur-md flex w-fit rounded-full border border-gray-500 transition-all duration-500"
+				className="select-none relative bg-black/90 backdrop-blur-[10px] flex w-fit rounded-full border border-gray-500 transition-all duration-500"
 				onMouseLeave={() => {
 					setHovering(false);
 					setPosition({
@@ -25,7 +25,7 @@ const Homenav = () => {
 				}}
 				initial={{ y: -100, opacity: 0 }}
 				animate={{ y: 0, opacity: 1 }} 
-				transition={{ type: "spring", stiffness: 120, damping: 15 }}
+				transition={{ type: "spring", stiffness: 80, damping: 15 }}
 			>
 				<Tab targetId="home" setPosition={setPosition} setHovering={setHovering}>
 					Home

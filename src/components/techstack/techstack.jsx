@@ -58,7 +58,7 @@ const Techstack = () => {
 
 	return (
 		<div id="stackcontainer" className="h-full flex flex-col overflow-hidden ">
-			<div className="min-h-[10vh] text-3xl md:text-4xl text-center pt-24">
+			<div className="min-h-[10vh] text-3xl md:text-4xl text-center pt-24 text-black dark:text-white">
 				Tech
 				<p className="text-gradient font-bold font-italic">Stack</p>
 			</div>
@@ -106,7 +106,7 @@ const Techstack = () => {
 
 					<div className="flex items-center">
 						<VerticalText text="UI/UX Design" />
-						<div className="flex flex-col  gap-[2vw] border-l p-[8vw]">
+						<div className="flex flex-col  gap-[2vw]  border-l-2 border-cyan-800 dark:border-cyan-300 p-[8vw]">
 							<Card icon={figmaIcon} label="Figma" />
 							<Card icon={canvaIcon} label="Canva" />
 						</div>
@@ -116,7 +116,7 @@ const Techstack = () => {
 				<div id="dev" className="flex w-[200vw] md:w-[100vw] justify-around">
 					<div className="flex items-center justify-center">
 						<VerticalText text="VERSION CONTROL" />
-						<div className="flex flex-col  gap-[2vw] border-l p-[8vw]">
+						<div className="flex flex-col  gap-[2vw] border-l-2 border-cyan-800 dark:border-cyan-300 p-[8vw]">
 							<Card icon={gitIcon} label="Git" />
 							<Card icon={githubIcon} label="GitHub" />
 						</div>
@@ -124,7 +124,7 @@ const Techstack = () => {
 
 					<div className="flex items-center justify-center">
 						<VerticalText text="HOSTING & DEPLOYMENT" />
-						<div className="flex flex-col gap-[2vw] border-l p-[8vw] ">
+						<div className="flex flex-col gap-[2vw] border-l-2 border-cyan-800 dark:border-cyan-300 p-[8vw] ">
 							<Card icon={netlifyIcon} label="Netlify" />
 							<Card icon={renderIcon} label="Render" />
 							<Card icon={githubPagesIcon} label="GitHub Pages" />
@@ -137,14 +137,15 @@ const Techstack = () => {
 };
 
 const Card = ({ icon, label }) => (
-	<div className="flex flex-col border-[.2vw] w-[22vw] h-[22vw] md:w-[12vw] md:h-[12vw] justify-center items-center p-[2vw] rounded-[1vw] contrast-50  hover:contrast-100  transition-all duration-700">
-		<img
-			src={icon}
-			alt={`${label} icon`}
-			className="w-[10vw] h-[10vw] md:w-[6vw] md:h-[6vw] object-contain"
-		/>
-		<p className="text-[2.5vw] md:text-[1.5vw] text-nowrap">{label}</p>
-	</div>
+<div className="group flex flex-col border-[.2vw] w-[22vw] h-[22vw] md:w-[12vw] md:h-[12vw] justify-center items-center p-[2vw] rounded-[1vw] border-teal-700 hover:border-black dark:hover:border-white hover:scale-105 transition-all duration-400 bg-black/10">
+    <img
+        src={icon}
+        alt={`${label} icon`}
+        className="w-[10vw] h-[10vw] md:w-[6vw] md:h-[6vw] object-contain drop-shadow-lg transition-all duration-800 group-hover:contrast-[300%] group-hover:grayscale group-hover:brightness-[60%] dark:group-hover:invert group-hover:drop-shadow-[0_4px_6px_rgba(2,25,25,0.8)] dark:group-hover:drop-shadow-[0_4px_6px_rgba(255,255,255,0.8)]"
+    />
+    <p className="text-[2.5vw] md:text-[1.5vw] text-nowrap text-black/40 group-hover:text-black dark:text-white/40 dark:group-hover:text-white transition-all duration-400">{label}</p>
+</div>
+
 );
 
 const VerticalText = ({ text }) => (

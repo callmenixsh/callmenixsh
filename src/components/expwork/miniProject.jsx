@@ -49,14 +49,14 @@ const projects = [
 const MiniProject = () => {
 	return (
 	  <div className="flex flex-col justify-center items-center my-28">
-		<h1 className="text-3xl underline pb-14 ">Mini Projects</h1>
+		<h1 className="text-3xl underline pb-14 text-black dark:text-white ">Mini Projects</h1>
   
 		{/* Responsive Grid with Wrapping */}
 		<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-6 mx-10">
 		  {projects.map((project, index) => (
 			<a
 			  key={index}
-			  className="group flex items-center justify-center flex-col p-1 border rounded-lg hover:scale-105 hover:rotate-2 transition-all overflow-hidden"
+			  className="group flex items-center justify-center flex-col p-1 border-2 border-black dark:border-white rounded-lg hover:scale-105 hover:rotate-2 transition-all overflow-hidden"
 			  href={project.url}
 			  target="_blank"
 			  rel="noopener noreferrer"
@@ -68,7 +68,7 @@ const MiniProject = () => {
 				  alt={project.name}
 				/>
 			  </div>
-			  <div className="group-hover:text-gradient transition-all duration-300 text-sm mt-2 text-center">{project.name}</div>
+			  <div className="group-hover:text-gradient text-black dark:text-white transition-all duration-300 text-sm mt-2 text-center">{project.name}</div>
 			</a>
 		  ))}
 		</div>

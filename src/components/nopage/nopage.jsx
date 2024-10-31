@@ -15,8 +15,8 @@ const nopage = () => {
 			</div>
 
 			<div className="navigate flex flex-col items-center">
-				<h3 className="text-xl sm:text-3xl pt-8  font-bold ">Evacuate to</h3>
-				<ul className="flex flex-col items-center sm:flex-row pt-3 sm:pt-6 gap-4 sm:gap-10 transition-all duration:500 ">
+				<h3 className="text-xl sm:text-3xl pt-8  font-bold text-black dark:text-white ">Evacuate to</h3>
+				<ul className="flex flex-col items-center sm:flex-row pt-3 sm:pt-6 gap-4 sm:gap-10 transition-all duration:500 text-black dark:text-white">
 					<li>
 						<Link
 							to="/"

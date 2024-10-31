@@ -36,17 +36,6 @@
     left: 60%;
   }
   
-  /* .circle-center{
-    position: absolute;
-    border-radius: 50%;
-    background: rgba(64, 197, 238, 0.651);
-    box-shadow: 0 0 100px rgba(64, 197, 238, 0.815);
-    filter: blur(160px);
-    width: 500px;
-    height: 500px;
-    display: flex;
-  } */
-
 
   .blinking-cursor {
     display: inline-block;

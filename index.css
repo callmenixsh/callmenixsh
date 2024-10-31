@@ -101,3 +101,30 @@ main {
 .no-scroll {
     overflow: hidden; /* Prevent scrolling */
 }
+
+/* Basic reset */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+  }
+  
+  body {
+	height: 100vh;
+	background-color: #1a1a1a; /* Dark background for contrast */
+	overflow: hidden;
+  }
+  
+  .cursor-glare {
+	z-index: -1000;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 120px; 
+	height: 120px; 
+	border-radius: 100%;
+	background: radial-gradient(circle, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0) 70%);
+	pointer-events: none;
+	opacity: 0.9;
+	transition: transform 0.05s linear; 
+  }

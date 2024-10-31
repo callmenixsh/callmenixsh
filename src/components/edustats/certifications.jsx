@@ -26,7 +26,7 @@ const Certifications = () => {
 	return (
 		<div className=" flex flex-col mt-24 mx-5 justify-center items-center">
 			<div className="w-full xl:w-[1300px] flex flex-col justify-center items-center">
-				<p className="flex flex-row text-4xl text-white my-6 w-full justify-center">
+				<p className="flex flex-row text-4xl text-black dark:text-white my-6 w-full justify-center font-semibold">
 					<span>My</span>
 					<span className="text-gradient font-italic font-bold">
 						{" "}
@@ -34,16 +34,16 @@ const Certifications = () => {
 					</span>
 				</p>
 
-				<div className="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8 w-5/6 mt-8 text-sm lg:text-base">
+				<div className="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8 w-5/6 mt-8 text-sm lg:text-base text-black dark:text-white">
 					{certificateData.map((cert, index) => (
 						<div
 							key={index}
-							className="flex flex-col border p-4 rounded-md hover:scale-105 group transition-all duration-300"
+							className="flex flex-col border-2 border-black dark:border-white p-4 rounded-md hover:scale-105 group transition-all duration-300"
 						>
 							<div className="font-bold group-hover:translate-x-5 transition-all">
 								{cert.name}
 							</div>
-							<div className="text-gray-300 group-hover:translate-x-10 group-hover:text-cyan-500 transition-all">
+							<div className="opacity-75 group-hover:translate-x-10 group-hover:text-cyan-500 group-hover:opacity-100 group-hover:font-semibold transition-all">
 								{cert.company}
 							</div>
 							{cert.image && (

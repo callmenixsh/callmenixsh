@@ -2,21 +2,25 @@ import React, { useRef, useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
 
-const Worknav = () => {
+const Worknav = ({ setActiveComponent }) => {
 	const [position, setPosition] = useState({
 		left: 0,
 		width: "100%",
 		opacity: 0.1,
 		backgroundColor: "rgb(255, 255, 255)",
 	});
-	const location = useLocation();
+	const [activeTab, setActiveTab] = useState("MajorProject");
+
+	const { pathname } = useLocation();
+	useEffect(() => {
+		window.scrollTo({ top: 0, behavior: 'smooth' }); 
+	}, [pathname]);
 
 	useEffect(() => {
-		const activeTab = document.querySelector(
-			`[data-id="${location.pathname}"]`
-		);
-		if (activeTab) {
-			const { offsetWidth, offsetLeft } = activeTab;
+		setActiveComponent("MajorProject");
+		const initialTab = document.querySelector(`[data-id="MajorProject"]`);
+		if (initialTab) {
+			const { offsetWidth, offsetLeft } = initialTab;
 			setPosition({
 				left: offsetLeft,
 				width: offsetWidth,
@@ -24,14 +28,12 @@ const Worknav = () => {
 				backgroundColor: "rgba(255, 255, 255, 1)",
 			});
 		}
-	}, [location.pathname]);
+	}, [setActiveComponent]);
 
 	const handleMouseLeave = () => {
-		const activeTab = document.querySelector(
-			`[data-id="${location.pathname}"]`
-		);
-		if (activeTab) {
-			const { offsetWidth, offsetLeft } = activeTab;
+		const activeElement = document.querySelector(`[data-id="${activeTab}"]`);
+		if (activeElement) {
+			const { offsetWidth, offsetLeft } = activeElement;
 			setPosition({
 				left: offsetLeft,
 				width: offsetWidth,
@@ -41,57 +43,100 @@ const Worknav = () => {
 		}
 	};
 
+	const handleTabClick = (tabName) => {
+		setActiveTab(tabName);
+		setActiveComponent(tabName);
+		window.scrollTo({ top: 0, behavior: 'smooth' }); 
+	};
+
 	return (
-		<div className="fixed top-0 left-0 w-full flex items-center justify-center py-3 z-30 ">
+		<motion.div
+			className="fixed top-0 left-0 w-full flex items-center justify-center py-3 z-30"
+			initial={{ y: -100, opacity: 0 }}
+			animate={{ y: 0, opacity: 1 }}
+			transition={{ type: "spring", stiffness: 80, damping: 15 }}
+		>
 			<ul
-				className="relative bg-teal-900/30 backdrop-blur-md flex w-fit rounded-full border border-gray-500 transition-all duration-500"
-				onMouseLeave={handleMouseLeave} // Call handleMouseLeave on mouse leave
+				className="relative select-none invert dark:invert-0 bg-black/90 backdrop-blur-md flex w-fit rounded-full border border-white border-gray-500 transition-all duration-500"
+				onMouseLeave={handleMouseLeave}
 			>
-				<Tab targetPath="/" setPosition={setPosition}>
+				<Tab
+					name="Portfolio"
+					to="/"
+					setPosition={setPosition}
+					onClick={() => handleTabClick("Portfolio")}
+				>
 					Portfolio
 				</Tab>
-				<Tab targetPath="/projects" setPosition={setPosition}>
-					Projects
-				</Tab>
-				<Tab targetPath="/minis" setPosition={setPosition}>
+
+				<Tab
+					name="MiniProject"
+					setPosition={setPosition}
+					onClick={() => handleTabClick("MiniProject")}
+				>
 					Minis
 				</Tab>
-				<Tab targetPath="/experience" setPosition={setPosition}>
-					Experience
+				<Tab
+					name="MajorProject"
+					setPosition={setPosition}
+					onClick={() => handleTabClick("MajorProject")}
+				>
+					Projects
 				</Tab>
+				<Tab
+					name="Experiences"
+					setPosition={setPosition}
+					onClick={() => handleTabClick("Experiences")}
+				>
+					Experiences
+				</Tab>
+
 				<Cursor position={position} />
 			</ul>
-		</div>
+		</motion.div>
 	);
 };
 
-const Tab = ({ children, targetPath, setPosition }) => {
+const Tab = ({ children, name, to, setPosition, onClick }) => {
 	const ref = useRef(null);
 
-	return (
+	const handleCursorEnter = () => {
+		if (ref.current) {
+			const { offsetWidth, offsetLeft } = ref.current;
+			setPosition({
+				left: offsetLeft,
+				width: offsetWidth,
+				opacity: 1,
+				backgroundColor: "rgba(255, 255, 255, 1)",
+			});
+		}
+	};
+
+	return to ? (
 		<Link
-			to={targetPath}
+			to={to}
 			className="w-full h-full flex items-center justify-center"
+			onClick={onClick}
 		>
 			<li
 				ref={ref}
-				data-id={targetPath}
-				onMouseEnter={() => {
-					if (ref.current) {
-						const { offsetWidth, offsetLeft } = ref.current;
-						setPosition({
-							left: offsetLeft,
-							width: offsetWidth,
-							opacity: 1,
-							backgroundColor: "rgba(255, 255, 255, 1)",
-						});
-					}
-				}}
+				data-id={name}
+				onMouseEnter={handleCursorEnter}
 				className="relative z-10 cursor-pointer text-white mix-blend-difference px-2 py-2 sm:px-3 sm:py-2 lg:px-5 lg:py-3 text-xs sm:text-sm lg:text-base transition-all duration-300"
 			>
 				{children}
 			</li>
 		</Link>
+	) : (
+		<li
+			ref={ref}
+			data-id={name}
+			onMouseEnter={handleCursorEnter}
+			onClick={onClick}
+			className="relative z-10 cursor-pointer text-white mix-blend-difference px-2 py-2 sm:px-3 sm:py-2 lg:px-5 lg:py-3 text-xs sm:text-sm lg:text-base transition-all duration-300"
+		>
+			{children}
+		</li>
 	);
 };
 

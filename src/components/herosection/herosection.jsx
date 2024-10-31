@@ -116,7 +116,7 @@ const HeroSection = () => {
       {/* Hero Content */}
       <div className="flex flex-col items-center md:items-start md:ml-24 relative z-10 mb-14 md:mb-24 lg:mb-0 transition-all duration-300 ">
         <div className="flex flex-col-reverse md:flex-row justify-center items-center md:items-end mb-2 ">
-          <div className="flex mt-4 flex-col items-center md:items-start ">
+          <div className="flex mt-4 flex-col items-center md:items-start text-black font-bold dark:text-gray-400 dark:font-normal ">
             <div className="flex flex-row items-end md:items-start gap-2 md:gap-0 md:flex-col ">
               <div className="text-lg sm:text-2xl lg:text-3xl font-Kiwi text-nowrap transition-all duration-300 ">
                 Hi, I'm
@@ -129,7 +129,7 @@ const HeroSection = () => {
               a passionate
             </div>
           </div>
-          <img src={MeImage} alt="Profile" className="w-72 h-72 lg:w-96 lg:h-96 transition-all duration-300" />
+          <img src={MeImage} alt="Profile" className="w-72 h-72 lg:w-96 lg:h-96 transition-all duration-300 select-none " />
         </div>
         <div className="h-16 md:h-24 text-gradient text-4xl sm:text-5xl lg:text-7xl font-semibold transition-all duration-300">
           {currentRole}

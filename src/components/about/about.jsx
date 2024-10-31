@@ -18,9 +18,9 @@ const about = () => {
 	  };
 	return (
 		<>
-			<div className="w-full flex	flex-col items-center justify-center mt-24  ">
+			<div className="w-full flex	flex-col items-center justify-center mt-24 backdrop-blur-xl text-black dark:text-white font-semibold dark:font-normal">
 				<div className="max-w-[1200px]">
-					<div className="flex flex-row gap-5 text-white text-xl sm:text-2xl lg:text-4xl font-Kiwi items-center justify-center mt-16 transition-all duration-300">
+					<div className="flex flex-row gap-5 dark:text-white text-xl sm:text-2xl lg:text-4xl font-Kiwi items-center justify-center mt-16 transition-all duration-300">
 						<AiOutlineMessage className="size-8 sm:size-10 lg:size-14 " />
 						<div className="flex gap-2">
 							A Bit
@@ -78,35 +78,35 @@ const about = () => {
 										target="_blank"
 										rel="noopener noreferrer"
 									>
-										<FiMail className="size-7 sm:size-9 lg:size-12 bg-black p-1.5 rounded-lg invert hover:scale-110 duration-200" />
+										<FiMail className="size-7 sm:size-9 lg:size-12 dark:bg-black p-1.5 rounded-lg dark:invert hover:scale-110 duration-200" />
 									</a>
 									<a
 										href="https://www.linkedin.com/in/callmenixsh/"
 										target="_blank"
 										rel="noopener noreferrer"
 									>
-										<FaLinkedin className="size-7 sm:size-9  lg:size-12 bg-black p-1.5 rounded-lg invert hover:scale-110 duration-200" />
+										<FaLinkedin className="size-7 sm:size-9  lg:size-12 dark:bg-black p-1.5 rounded-lg dark:invert hover:scale-110 duration-200" />
 									</a>
 									<a
 										href="https://github.com/callmenixsh"
 										target="_blank"
 										rel="noopener noreferrer"
 									>
-										<FaGithub className="size-7 sm:size-9  lg:size-12 bg-black p-1.5 rounded-lg invert hover:scale-110 duration-200" />
+										<FaGithub className="size-7 sm:size-9  lg:size-12 dark:bg-black p-1.5 rounded-lg dark:invert hover:scale-110 duration-200" />
 									</a>
 									{/* <a
 										href="https://instagram.com/callmenixsh"
 										target="_blank"
 										rel="noopener noreferrer"
 									>
-										<FaInstagram className="size-7 sm:size-9  lg:size-12 bg-black p-1.5 rounded-lg invert hover:scale-110 duration-200" />
+										<FaInstagram className="size-7 sm:size-9  lg:size-12 dark:bg-black p-1.5 rounded-lg dark:invert hover:scale-110 duration-200" />
 									</a> */}
 									<a
 										href="https://x.com/callmenixsh"
 										target="_blank"
 										rel="noopener noreferrer"
 									>
-										<FaXTwitter className="size-7 sm:size-9  lg:size-12 bg-black p-1.5 rounded-lg invert hover:scale-110 duration-200" />
+										<FaXTwitter className="size-7 sm:size-9  lg:size-12 dark:bg-black p-1.5 rounded-lg dark:invert hover:scale-110 duration-200" />
 									</a>
 									{/* <a href="#" className="invisible"></a> */}
 								</div>

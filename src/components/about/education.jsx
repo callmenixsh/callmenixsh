@@ -59,19 +59,19 @@ const EducationalQualifications = () => {
 
 	return (
 		<>
-			<div className="w-full justify-center flex my-20">
+			<div className="w-full justify-center flex my-20 text-black dark:text-white">
 				<button
 					onClick={toggleMenu}
-					className={`border border-white text-white px-4 py-2 rounded-xl hover:bg-white/20 hover:scale-105 active:scale-90 transition duration-300 ${
+					className={`border-2 border-black dark:border-white dark:text-white font-semibold dark:font-normal px-4 py-2 rounded-xl hover:bg-white/20 hover:scale-105  active:scale-90 transition duration-300 ${
 						isOpen ? "translate-y-[100vh]" : "translate-y-0"
 					}`}
 				>
-					Educational Qualifications
+					Educational Qualifications 
 				</button>
 
 				<div
 					ref={menuRef}
-					className={`fixed inset-x-0 bottom-0 bg-black/80 border-t shadow-lg z-50 rounded-t-lg max-h-[60vh] overflow-y-auto overflow-x-hidden p-4 transition-transform duration-300 ease-in-out ${
+					className={`fixed inset-x-0 bottom-0 dark:bg-black/80 border-t border-black dark:border-white shadow-lg z-50 rounded-t-lg max-h-[60vh] overflow-y-auto overflow-x-hidden p-4 transition-transform duration-300 ease-in-out ${
 						isOpen ? "translate-y-0" : "translate-y-full"
 					}`}
 				>
@@ -79,7 +79,7 @@ const EducationalQualifications = () => {
 						{qualifications.map((q, index) => (
 							<div
 								key={index}
-								className="border rounded p-5 group transition-all duration-300"
+								className="border border-black dark:border-white rounded p-5 group transition-all duration-300"
 							>
 								<div className="text-lg sm:text-xl lg:text-2xl">{q.title}</div>
 								<div className="text-xs sm:text-sm lg:text-lg mt-2 group-hover:scale-110 group-hover:translate-x-[10vw] transition-all duration-300">
