@@ -22,7 +22,7 @@ const TopProjects = () => {
 				>
 					<div className="relative group p-2 sm:p-3 rounded-xl overflow-hidden flex items-center justify-center border border-black dark:border-white text-black font-semibold dark:text-white uppercase w-48 sm:w-52 text-nowrap hover:bg-cyan-500/40 hover:drop-shadow transition-all duration-300 pointer select-none">
 						<div className="flex items-center translate-x-[16px] gap-4 group-hover:-translate-x-6 transition-all duration-300 text-sm sm:text-base">
-							<p>See all my projects</p>
+							<p>All Projects</p>
 							<p>
 								<FaArrowRight />
 							</p>
@@ -81,13 +81,21 @@ const TopProjects = () => {
 							</div>
 
 							<div className="w-full sm:w-6/12  md:w-full flex justify-around gap-4 text-sm lg:text-base">
-								<a  href="https://typeraijin.netlify.app" target="_blank" className="border border-black dark:border-white p-3 flex items-center justify-around gap-2 bg-cyan-100/50 rounded-md w-4/6 pointer select-none hover:bg-cyan-100/90 hover:scale-105 hover:text-black transition-all duration-300">
+								<a
+									href="https://typeraijin.netlify.app"
+									target="_blank"
+									className="border border-black dark:border-white p-3 flex items-center justify-around gap-2 bg-cyan-100/50 rounded-md w-4/6 pointer select-none hover:bg-cyan-100/90 hover:scale-105 hover:text-black transition-all duration-300"
+								>
 									<div>Live Demo</div>
 									<div>
 										<FaRegShareFromSquare />
 									</div>
 								</a>
-								<a href="https://github.com/callmenixsh/TypeRaijin" target="_blank" className="border border-black dark:border-white p-3 flex items-center justify-around gap-2 bg-cyan-100/50 rounded-md w-3/6 pointer select-none hover:bg-cyan-100/90 hover:text-black hover:scale-105 transition-all duration-300">
+								<a
+									href="https://github.com/callmenixsh/TypeRaijin"
+									target="_blank"
+									className="border border-black dark:border-white p-3 flex items-center justify-around gap-2 bg-cyan-100/50 rounded-md w-3/6 pointer select-none hover:bg-cyan-100/90 hover:text-black hover:scale-105 transition-all duration-300"
+								>
 									<div>Repo</div>
 									<div>
 										<FaCode />

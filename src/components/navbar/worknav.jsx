@@ -56,19 +56,16 @@ const Worknav = ({ setActiveComponent }) => {
 			animate={{ y: 0, opacity: 1 }}
 			transition={{ type: "spring", stiffness: 80, damping: 15 }}
 		>
+
+			<Link className="invert dark:invert-0 fixed top-3 left-4 flex px-2 py-2.5 rounded-2xl bg-white text-black text-xs sm:text-sm lg:text-base transition-all duration-300"
+			to="/">
+				Portfolio
+			</Link>
+
 			<ul
 				className="relative select-none invert dark:invert-0 bg-black/90 backdrop-blur-md flex w-fit rounded-full border border-white border-gray-500 transition-all duration-500"
 				onMouseLeave={handleMouseLeave}
 			>
-				<Tab
-					name="Portfolio"
-					to="/"
-					setPosition={setPosition}
-					onClick={() => handleTabClick("Portfolio")}
-				>
-					Portfolio
-				</Tab>
-
 				<Tab
 					name="MiniProject"
 					setPosition={setPosition}

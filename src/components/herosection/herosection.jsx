@@ -5,7 +5,6 @@ import "./herosection.css";
 const roles = [
   "Web Developer",
   "UI/UX Designer",
-  "Programmer",
   "Video Editor",
 ];
 
@@ -76,11 +75,11 @@ const HeroSection = () => {
         currentText += roles[roleIndex][index];
         setCurrentRole(currentText);
         index++;
-        typingTimeout = setTimeout(type, 100);
+        typingTimeout = setTimeout(type, 50);
       } else {
         setTimeout(() => {
           erase();
-        }, 2000);
+        }, 1500);
       }
     };
 
@@ -88,7 +87,7 @@ const HeroSection = () => {
       if (currentText.length > 0) {
         currentText = currentText.slice(0, -1);
         setCurrentRole(currentText);
-        typingTimeout = setTimeout(erase, 50); 
+        typingTimeout = setTimeout(erase, 20); 
       } else {
         index = 0;
         setRoleIndex((prevIndex) => (prevIndex + 1) % roles.length);

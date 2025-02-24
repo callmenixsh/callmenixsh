@@ -11,6 +11,7 @@ import nodeIcon from "../../assets/logos/node.png";
 import mongodbIcon from "../../assets/logos/mongodb.png";
 import expressIcon from "../../assets/logos/express.png";
 import javaIcon from "../../assets/logos/java.png";
+import pyIcon from "../../assets/logos/python.png";
 import mysqlIcon from "../../assets/logos/mysql.png";
 import cppIcon from "../../assets/logos/cpp.png";
 import gsapIcon from "../../assets/logos/gsap.png";
@@ -78,15 +79,15 @@ const Techstack = () => {
 					</div>
 
 					<div className="flex gap-[2vw]">
-						<Card icon={mongodbIcon} label="MongoDB" />
-						<Card icon={expressIcon} label="ExpressJS" />
+						{/* <Card icon={mongodbIcon} label="MongoDB" />
+						<Card icon={expressIcon} label="ExpressJS" /> */}
 						<Card icon={reactIcon} label="ReactJS" />
 						<Card icon={nodeIcon} label="NodeJS" />
 					</div>
 
 					<div className="flex gap-[2vw]">
 						<Card icon={cppIcon} label="C++" />
-						<Card icon={javaIcon} label="Java" />
+						<Card icon={pyIcon} label="Python" />
 						<Card icon={mysqlIcon} label="MySQL" />
 					</div>
 				</div>

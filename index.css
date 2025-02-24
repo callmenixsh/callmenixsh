@@ -114,7 +114,7 @@ main {
 	background-color: #1a1a1a; /* Dark background for contrast */
 	overflow: hidden;
   }
-  
+/*   
   .cursor-glare {
 	z-index: -1000;
 	position: fixed;
@@ -127,4 +127,4 @@ main {
 	pointer-events: none;
 	opacity: 0.9;
 	transition: transform 0.05s linear; 
-  }
+  } */

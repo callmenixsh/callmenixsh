@@ -7,15 +7,14 @@ import resume from "../../assets/content/resume.pdf";
 const about = () => {
 	const buttonRef = useRef();
 
-
 	const downloadResume = () => {
 		const link = document.createElement("a");
 		link.href = resume;
-		link.download = "Nixsh_Resume.pdf"; 
-		document.body.appendChild(link); 
-		link.click(); 
+		link.download = "Nixsh_Resume.pdf";
+		document.body.appendChild(link);
+		link.click();
 		document.body.removeChild(link);
-	  };
+	};
 	return (
 		<>
 			<div className="w-full flex	flex-col items-center justify-center mt-24 backdrop-blur-xl text-black dark:text-white font-semibold dark:font-normal">
@@ -34,7 +33,7 @@ const about = () => {
 								<p>
 									Hey, I'm Nishant, an engineering student of batch (2022-26)
 									with a passion for Web Development, UI/UX designing, Video
-									Editing and Programming.
+									Editing.
 								</p>
 								<p>
 									I'm skilled in C++,HTML, CSS, JavaScript, ReactJS and
@@ -44,20 +43,17 @@ const about = () => {
 							<ul className="text-sm sm:text-lg lg:text-xl transition-all duration-300">
 								What Im Upto right now :
 								<li className="text-xs sm:text-sm lg:text-lg transition-all duration-300">
-									- Currently i am working on a self project{" "}
+									- Currently i am working on multiple small projects to add to my profile.
+								</li>
+								<li className="text-xs sm:text-sm lg:text-lg transition-all duration-300">
+									- Focusing on DSA via {" "}
 									<a
-										href="https://typeraijin.netlify.app/"
-										target="_blank"
+										href="https://leetcode.com/u/callmenixsh/"
 										className="underline text-teal-300"
 									>
-										TypeRaijin
-									</a>
-								</li>
-								<li className="text-xs sm:text-sm lg:text-lg transition-all duration-300">
-									- I am creating other small projects to master Fullstack
-								</li>
-								<li className="text-xs sm:text-sm lg:text-lg transition-all duration-300">
-									- Doing DSA on leetcode daily
+										leetcode
+									</a>{" "}
+									daily.
 								</li>
 								{/* <li className="sm:text-sm lg:text-lg">- I occasionally write <Link to="/blogs" className="underline text-teal-300">blogs</Link> about my journey</li> */}
 							</ul>

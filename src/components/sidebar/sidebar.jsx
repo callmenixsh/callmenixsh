@@ -140,6 +140,7 @@ const Sidebar = () => {
 									<Link
 										to="/"
 										className="underline sm:text-lg lg:text-2xl duration-300 hover:text-gradient hover:font-bold"
+										onClick={toggleSidebar}
 									>
 										Home
 									</Link>
@@ -148,6 +149,7 @@ const Sidebar = () => {
 									<Link
 										to="/projects"
 										className="underline sm:text-lg lg:text-2xl duration-300 hover:text-gradient hover:font-bold"
+										onClick={toggleSidebar}
 									>
 										My Works
 									</Link>
@@ -156,6 +158,7 @@ const Sidebar = () => {
 									<Link
 										to="/blogs"
 										className="underline sm:text-lg lg:text-2xl duration-300 hover:text-gradient hover:font-bold"
+										onClick={toggleSidebar}
 									>
 										Blog
 									</Link>

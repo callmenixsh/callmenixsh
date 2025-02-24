@@ -1,47 +1,71 @@
 import React, { useRef, useState } from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 const Homenav = () => {
 	const [position, setPosition] = useState({
 		left: 0,
-		width: '100%',
+		width: "100%",
 		opacity: 0.1,
-		backgroundColor: 'rgb(255, 255, 255)',
+		backgroundColor: "rgb(255, 255, 255)",
 	});
 	const [hovering, setHovering] = useState(false);
 
 	return (
-		<div className="invert dark:invert-0 fixed top-0 left-0 w-full flex items-center justify-center py-3 z-30">
-			<motion.ul
-				className="select-none relative bg-black/90 backdrop-blur-[10px] flex w-fit rounded-full border border-gray-500 transition-all duration-500"
+		<motion.ul
+				className="fixed top-0 left-0 w-full flex items-center justify-center py-3 z-30"
 				onMouseLeave={() => {
 					setHovering(false);
 					setPosition({
 						left: 0,
-						width: '100%',
+						width: "100%",
 						opacity: 0.1,
-						backgroundColor: 'rgb(255, 255, 255)',
+						backgroundColor: "rgb(255, 255, 255)",
 					});
 				}}
 				initial={{ y: -100, opacity: 0 }}
-				animate={{ y: 0, opacity: 1 }} 
+				animate={{ y: 0, opacity: 1 }}
 				transition={{ type: "spring", stiffness: 80, damping: 15 }}
 			>
-				<Tab targetId="home" setPosition={setPosition} setHovering={setHovering}>
+				<Link
+					className="invert dark:invert-0 fixed top-3 left-4 flex px-2 py-2.5 rounded-2xl bg-white text-black text-xs sm:text-sm lg:text-base transition-all duration-300"
+					to="/projects"
+				>
+					Works
+				</Link>
+
+					<div className="relative select-none invert dark:invert-0 bg-black/90 backdrop-blur-md flex w-fit rounded-full border border-white border-gray-500 transition-all duration-500">
+				<Tab
+					targetId="home"
+					setPosition={setPosition}
+					setHovering={setHovering}
+				>
 					Home
 				</Tab>
-				<Tab targetId="about" setPosition={setPosition} setHovering={setHovering}>
+				<Tab
+					targetId="about"
+					setPosition={setPosition}
+					setHovering={setHovering}
+				>
 					About
 				</Tab>
-				<Tab targetId="skills" setPosition={setPosition} setHovering={setHovering}>
+				<Tab
+					targetId="skills"
+					setPosition={setPosition}
+					setHovering={setHovering}
+				>
 					Skills
 				</Tab>
-				<Tab targetId="contact" setPosition={setPosition} setHovering={setHovering}>
+				<Tab
+					targetId="contact"
+					setPosition={setPosition}
+					setHovering={setHovering}
+				>
 					Contact
 				</Tab>
 				<Cursor position={position} />
-			</motion.ul>
 		</div>
+			</motion.ul>
 	);
 };
 
@@ -65,7 +89,7 @@ const Tab = ({ children, targetId, setPosition, setHovering }) => {
 						left: offsetLeft,
 						width: offsetWidth,
 						opacity: 1,
-						backgroundColor: 'rgba(255, 255, 255, 1)',
+						backgroundColor: "rgba(255, 255, 255, 1)",
 					});
 					setHovering(true);
 				}
