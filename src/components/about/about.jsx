@@ -46,7 +46,7 @@ const about = () => {
 									- Currently i am working on multiple small projects to add to my profile.
 								</li>
 								<li className="text-xs sm:text-sm lg:text-lg transition-all duration-300">
-									- Focusing on DSA via {" "}
+									- Learning DSA on {" "}
 									<a
 										href="https://leetcode.com/u/callmenixsh/"
 										className="underline text-teal-300"
