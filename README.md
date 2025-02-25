@@ -16,6 +16,5 @@
 <h3 align="center">Github Stats</h3>
 <p align="center">
 <img src="https://github-readme-stats.vercel.app/api?username=callmenixsh&show_icons=true&line_height=27&count_private=true&theme=nord&hide_border=true" alt="callmenixsh" />
-<a  href="https://git.io/streak-stats"><img src="https://streak-stats.demolab.com?user=callmenixsh&theme=nord&hide_border=true&card_width=500&card_height=205" alt="GitHub Streak" /></a>
 <a align="center" href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=callmenixsh&no-frame=true&theme=nord&margin-w=10&margin-h=10&title=Stars,Repo,Commit,Followers,Experience&column=5" alt="callmenixsh"/></a>
 </p>
