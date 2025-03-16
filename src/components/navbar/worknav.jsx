@@ -13,7 +13,7 @@ const Worknav = ({ setActiveComponent }) => {
 
 	const { pathname } = useLocation();
 	useEffect(() => {
-		window.scrollTo({ top: 0, behavior: 'smooth' }); 
+		window.scrollTo({ top: 0, behavior: "smooth" });
 	}, [pathname]);
 
 	useEffect(() => {
@@ -46,7 +46,7 @@ const Worknav = ({ setActiveComponent }) => {
 	const handleTabClick = (tabName) => {
 		setActiveTab(tabName);
 		setActiveComponent(tabName);
-		window.scrollTo({ top: 0, behavior: 'smooth' }); 
+		window.scrollTo({ top: 0, behavior: "smooth" });
 	};
 
 	return (
@@ -56,9 +56,10 @@ const Worknav = ({ setActiveComponent }) => {
 			animate={{ y: 0, opacity: 1 }}
 			transition={{ type: "spring", stiffness: 80, damping: 15 }}
 		>
-
-			<Link className="invert dark:invert-0 fixed top-3 left-4 flex px-2 py-2.5 rounded-2xl bg-white text-black text-xs sm:text-sm lg:text-base transition-all duration-300"
-			to="/">
+			<Link
+				className="invert dark:invert-0 fixed top-3 left-4 flex px-2 py-2 rounded-3xl bg-white text-black text-xs sm:text-sm lg:text-base transition-all duration-300 border-solid border border-black  hover:invert hover:scale-105"
+				to="/"
+			>
 				Portfolio
 			</Link>
 

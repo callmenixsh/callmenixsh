@@ -144,7 +144,7 @@ const Footer = () => {
 					</div>
 					<div className="flex flex-col justify-center items-center border-t border-black dark:border-white lg:border-t-2 mt-5 w-11/12 xl:w-[80rem] text-black dark:text-white">
 						<p className="mt-4 text-[.4rem] sm:text-xs">
-							© 2024 callmenixsh. All rights reserved.
+							©{new Date().getFullYear()} callmenixsh. All rights reserved.
 						</p>
 					</div>
 				</div>

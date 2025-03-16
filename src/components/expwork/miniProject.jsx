@@ -5,7 +5,9 @@ import NumberGuessThumb from "../../assets/content/number_guess.png";
 import TemperatureConvertorThumb from "../../assets/content/temperature_convertor.png";
 import DiceThumb from "../../assets/content/dice.png";
 import TicTacToeThumb from "../../assets/content/tictactoe.png";
-import ReminderThumb from "../../assets/content/Reminder.png";
+import ReminderThumb from "../../assets/content/reminder.png";
+
+import PassgenThumb from "../../assets/content/passwordgen.png";
 
 // Array to store project data
 const projects = [
@@ -43,6 +45,11 @@ const projects = [
 		name: "Rest Reminder",
 		img: ReminderThumb,
 		url: "https://callmenixsh.github.io/Hajime/Reminder/index.html",
+	},
+	{
+		name: "Password Generator",
+		img: PassgenThumb,
+		url: "https://callmenixsh.github.io/Hajime/Password/index.html",
 	},
 ];
 
