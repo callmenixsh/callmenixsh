@@ -1,7 +1,7 @@
 <h1 align="center">Hi 👋, I'm <a href="https://callmenixsh.github.io/callmenixsh/">Nishant</a></h1>
 <h3 align="center">I am a Web Developer currently pursuing my B-Tech degree</h3>
 
-- 🌲I'm currently working on my [Portfolio](https://callmenixsh.netlify.app/)
+- 🌲Check out my [Portfolio](https://callmenixsh.netlify.app/)
 - 💮 I'm currently learning Fullstack
 - 🌱 My first fullstack Project [TypeRaijin](https://typeraijin.netlify.app/)
 - 💻 Connect with me on [Linkedin](https://www.linkedin.com/in/callmenixsh/)
@@ -16,6 +16,5 @@
 <h3 align="center">Github Stats</h3>
 <p align="center">
 <img src="https://github-readme-stats.vercel.app/api?username=callmenixsh&show_icons=true&line_height=27&count_private=true&theme=nord&hide_border=true" alt="callmenixsh" />
-<a  href="https://git.io/streak-stats"><img src="https://streak-stats.demolab.com?user=callmenixsh&theme=nord&hide_border=true&card_width=500&card_height=205" alt="GitHub Streak" /></a>
 <a align="center" href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=callmenixsh&no-frame=true&theme=nord&margin-w=10&margin-h=10&title=Stars,Repo,Commit,Followers,Experience&column=5" alt="callmenixsh"/></a>
 </p>
