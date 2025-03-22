@@ -28,7 +28,7 @@ const Homenav = () => {
 				transition={{ type: "spring", stiffness: 80, damping: 15 }}
 			>
 				<Link
-					className="invert dark:invert-0 fixed top-3 left-4 flex px-2 py-2 rounded-3xl bg-white text-black text-xs sm:text-sm lg:text-base transition-all duration-300 border-solid border border-black  hover:invert hover:scale-105"
+					className="invert dark:invert-0 fixed top-3 left-4 flex px-2 py-2 rounded-3xl bg-white text-black text-xs sm:text-sm lg:text-base transition-all duration-300 border-solid border border-black hover:invert-0  dark:hover:invert hover:scale-105"
 					to="/projects"
 				>
 					Works

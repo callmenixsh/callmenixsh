@@ -9,19 +9,21 @@ const projects = [
 		videoSrc: Typeraijin,
 		liveDemo: "https://typeraijin.netlify.app/",
 		repoLink: "https://github.com/callmenixsh/TypeRaijin",
-	}
+	},
 ];
 
 const MajorProject = () => {
 	return (
 		<div className="flex flex-col justify-center items-center my-28">
-			<h1 className="text-3xl underline pb-14 text-black dark:text-white">Projects</h1>
+			<h1 className="text-3xl underline pb-14 text-black dark:text-white">
+				Projects
+			</h1>
 
-			<div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-10 sm:mx-10">
+			<div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-10 sm:mx-10  ">
 				{projects.map((project) => (
 					<div
 						key={project.id}
-						className="w-[300px] sm:w-[400px] content flex flex-col border-2 p-4 gap-4 rounded-xl items-center justify-center text-black dark:text-white border-black dark:border-white"
+						className="w-[300px] sm:w-[400px] content bg-black/10 dark:bg-white/10 flex flex-col border-2 p-4 gap-4 rounded-xl items-center justify-center text-black dark:text-white border-black dark:border-white"
 					>
 						TYPERAIJIN
 						{/* Video Section */}
@@ -34,7 +36,6 @@ const MajorProject = () => {
 							<source src={project.videoSrc} type="video/mp4" />
 							Your browser does not support the video tag.
 						</video>
-
 						{/* Buttons Section */}
 						<div className="w-[300px] sm:w-[400px] px-4 flex flex-row gap-4 items-between justify-between">
 							<a

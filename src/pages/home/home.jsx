@@ -8,7 +8,7 @@ import About from "../../components/about/about";
 import Education from "../../components/about/education";
 import Techstack from "../../components/techstack/techstack";
 import Topprojects from "../../components/topprojects/topprojects";
-import Certifications from "../../components/edustats/certifications";
+import Certifications from "../../components/certificates/certifications";
 
 const home = () => {
 	return (

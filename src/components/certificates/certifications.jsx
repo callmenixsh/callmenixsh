@@ -1,11 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import FUllstack from "../../assets/images/Fullstack.jpg";
 import Azure from "../../assets/images/Azure.png";
 import PowerBI from "../../assets/images/powerbi.png";
+import AIBeg from "../../assets/images/AIBeginners.png";
+import AIGuide from "../../assets/images/AIguide.jpg";
+import DSA from "../../assets/images/DS&A.png";
+import CyberS from "../../assets/images/Cybersecurity.png";
 
 const Certifications = () => {
 	const [selectedCert, setSelectedCert] = useState(null);
+	const canvasRef = useRef(null);
 
 	const certificateData = [
 		{
@@ -18,13 +23,52 @@ const Certifications = () => {
 			company: "~ Udemy",
 			image: FUllstack,
 		},
-		{ name: "Power BI workshop", company: "~ HMRITM", image: PowerBI },
+
+		{ name: "PowerBI Workshop", company: "~ HMRITM", image: PowerBI },
+		{ name: "AI for Beginners", company: "~ HP Life", image: AIBeg },
+		{ name: "Data Science & Analytics", company: "~ HP Life", image: DSA },
+		{
+			name: "Introduction To CyberSecurity",
+			company: "~ HP Life",
+			image: CyberS,
+		},
+		{ name: "Complete AI Guide", company: "~ Udemy", image: AIGuide },
 	];
+
+	useEffect(() => {
+		if (selectedCert) {
+			const canvas = canvasRef.current;
+			const ctx = canvas.getContext("2d");
+			const img = new Image();
+			img.src = selectedCert.image;
+			img.onload = () => {
+				canvas.width = img.width;
+				canvas.height = img.height;
+				ctx.drawImage(img, 0, 0, img.width, img.height);
+
+				ctx.font = "160px Arial";
+				ctx.fillStyle = "rgba(255, 255, 255, 0.24)";
+				ctx.textAlign = "center";
+				ctx.shadowColor = "rgba(0, 0, 0, 0.6)";
+				ctx.shadowBlur = 5;
+				ctx.strokeStyle = "rgba(0, 0, 0, 0.05)";
+
+				const text = "@callmenixsh";
+				ctx.save();
+				ctx.translate(img.width / 2, img.height / 2);
+				ctx.rotate(-Math.PI / 6);
+
+				ctx.strokeText(text, 0, 0);
+				ctx.fillText(text, 0, 0);
+				ctx.restore();
+			};
+		}
+	}, [selectedCert]);
 
 	const handleClose = () => setSelectedCert(null);
 
 	return (
-		<div className=" flex flex-col mt-24 mx-5 justify-center items-center">
+		<div className="flex flex-col mt-24 mx-5 justify-center items-center">
 			<div className="w-full xl:w-[1300px] flex flex-col justify-center items-center">
 				<p className="flex flex-row text-4xl text-black dark:text-white my-6 w-full justify-center font-semibold">
 					<span>My</span>
@@ -71,11 +115,9 @@ const Certifications = () => {
 							exit={{ scale: 0.8, opacity: 0 }}
 							transition={{ type: "spring", stiffness: 300, damping: 20 }}
 						>
-							<img
-								src={selectedCert.image}
-								alt={selectedCert.name}
+							<canvas
+								ref={canvasRef}
 								className="w-full h-auto object-contain select-none pointer-events-none"
-								style={{ userSelect: "none" }} // Prevent text selection
 							/>
 							<button
 								onClick={handleClose}

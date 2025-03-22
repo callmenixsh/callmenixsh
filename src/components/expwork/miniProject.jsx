@@ -60,16 +60,16 @@ const MiniProject = () => {
 			</h1>
 
 			{/* Responsive Grid with Wrapping */}
-			<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-6 mx-10">
+			<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-6 mx-10 ">
 				{projects.map((project, index) => (
 					<a
 						key={index}
-						className="group flex items-center justify-center flex-col p-1 border-2 border-black dark:border-white rounded-lg hover:scale-105 hover:rotate-2 transition-all overflow-hidden"
+						className="bg-black/10 dark:bg-white/10 group flex items-center justify-center flex-col p-1 border-2 border-black dark:border-white rounded-lg hover:scale-105 hover:rotate-2 transition-all overflow-hidden"
 						href={project.url}
 						target="_blank"
 						rel="noopener noreferrer"
 					>
-						<div className="w-44 h-28 overflow-hidden rounded-md">
+						<div className=" w-44 h-28 overflow-hidden rounded-md">
 							<img
 								className="w-full h-full object-cover"
 								src={project.img}
