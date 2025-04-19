@@ -1,18 +1,20 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa";
 import { FaRegShareFromSquare, FaCode } from "react-icons/fa6";
 import Typeraijin from "../../assets/content/typeraijin.mp4";
+import React, { useState } from "react";
 
 const TopProjects = () => {
 	const techStack = ["React", "Express", "Socket.io", "Node.js", "CSS"];
+
+	const [showTechStack, setShowTechStack] = useState(false);
 
 	return (
 		<div className="flex flex-col items-center justify-center mt-36">
 			{/* Title Section */}
 			<div className="w-full lg:w-[1000px] relative flex flex-col mx-5 justify-center items-center mb-10">
 				<div className="flex flex-row text-2xl sm:text-3xl lg:text-4xl text-white my-6 w-full justify-center underline decoration-black dark:decoration-white text-cyan-400">
-					<span className=" text-black dark:text-white">My</span>
+					<span className=" text-black dark:text-white">Top</span>
 					<span className="text-gradient font-italic font-bold"> Work</span>
 				</div>
 
@@ -61,7 +63,7 @@ const TopProjects = () => {
 					</video>
 
 					<div className="flex flex-col md:flex-row gap-4 items-between justify-between  text-black dark:text-white ">
-						<div className="text-sm md:text-base relative border border-black dark:border-white p-4  bg-cyan-100/50 rounded-md md:w-7/12 md:hover:-translate-y-[50px] md:hover:translate-x-[164px] md:hover:scale-[1.75] hover:bg-white/80 dark:hover:bg-black/80  transition-all duration-300">
+						<div className="text-sm md:text-base relative border border-black dark:border-white p-4  bg-cyan-100/50 rounded-md md:w-7/12 md:hover:-translate-y-[50px] md:hover:translate-x-[164px] md:hover:scale-[1.75] hover:bg-white/80 dark:hover:bg-black/80  transition-all duration-300 z-10">
 							Typeraijin is a fast-paced multiplayer typing game where players
 							compete to type words accurately and quickly. Developed using
 							React, Express, and Socket.io for real-time gameplay, it supports
@@ -69,15 +71,20 @@ const TopProjects = () => {
 						</div>
 
 						<div className="text-sm lg:text-base flex flex-col sm:flex-row md:flex-col gap-4 justify-around md:w-5/12 w-full">
-							<div className="w-full sm:w-6/12  md:w-full h-2/3 group border border-black dark:border-white p-4  bg-cyan-100/50 rounded-md hover:scale-[.99] transition-all duration-300 text-center items-center flex justify-center">
+							<div
+								className="w-full sm:w-6/12 md:w-full h-2/3 relative border border-black dark:border-white p-4 bg-cyan-100/50 rounded-md hover:scale-[.99] transition-all duration-300 text-center items-center flex justify-center cursor-pointer"
+								onClick={() => setShowTechStack(!showTechStack)}
+							>
 								Techstack
-								<div className="border-2 border-black dark:border-white opacity-0 group-hover:opacity-100 transition-all duration-500 absolute top-[0px] right-0 w-full bg-white dark:bg-black p-4 rounded-md shadow-lg">
-									<ul className="list-disc list-inside">
-										{techStack.map((tech, index) => (
-											<li key={index}>{tech}</li>
-										))}
-									</ul>
-								</div>
+								{showTechStack && (
+									<div className="absolute top-[0%] left-0 w-full bg-white dark:bg-black p-4 rounded-md shadow-lg border-2 border-black dark:border-white z-10">
+										<ul className="list-disc list-inside text-left">
+											{techStack.map((tech, index) => (
+												<li key={index}>{tech}</li>
+											))}
+										</ul>
+									</div>
+								)}
 							</div>
 
 							<div className="w-full sm:w-6/12  md:w-full flex justify-around gap-4 text-sm lg:text-base">

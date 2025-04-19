@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Particles from '../../assets/blocks/Particle/Particles.jsx';
 
 // Import Icons
 import htmlIcon from "../../assets/logos/html.png";
@@ -59,7 +60,19 @@ const Techstack = () => {
 
 	return (
 		<div id="stackcontainer" className="h-full flex flex-col overflow-hidden ">
-			<div className="min-h-[10vh] text-3xl md:text-4xl text-center pt-24 text-black dark:text-white">
+		<div className="absolute inset-0 z-[-1]">
+			<Particles
+				particleColors={["#ffffff", "#ffffff"]}
+				particleCount={200}
+				particleSpread={10}
+				speed={0.1}
+				particleBaseSize={100}
+				moveParticlesOnHover={true}
+				alphaParticles={false}
+				disableRotation={false}
+			/>
+		</div>
+			<div className="min-h-[10vh] text-2xl md:text-4xl sm:text-6xl text-center pt-24 text-black dark:text-white">
 				Tech
 				<p className="text-gradient font-bold font-italic">Stack</p>
 			</div>
@@ -138,15 +151,16 @@ const Techstack = () => {
 };
 
 const Card = ({ icon, label }) => (
-<div className="group flex flex-col border-[.2vw] w-[22vw] h-[22vw] md:w-[12vw] md:h-[12vw] justify-center items-center p-[2vw] rounded-[1vw] border-teal-700 hover:border-black dark:hover:border-white hover:scale-105 transition-all duration-400 bg-black/10">
-    <img
-        src={icon}
-        alt={`${label} icon`}
-        className="w-[10vw] h-[10vw] md:w-[6vw] md:h-[6vw] object-contain drop-shadow-lg transition-all duration-800 group-hover:contrast-[300%] group-hover:grayscale group-hover:brightness-[60%] dark:group-hover:invert group-hover:drop-shadow-[0_4px_6px_rgba(2,25,25,0.8)] dark:group-hover:drop-shadow-[0_4px_6px_rgba(255,255,255,0.8)]"
-    />
-    <p className="text-[2.5vw] md:text-[1.5vw] text-nowrap text-black/40 group-hover:text-black dark:text-white/40 dark:group-hover:text-white transition-all duration-400">{label}</p>
-</div>
-
+	<div className="group  flex flex-col border-[.2vw] w-[22vw] h-[22vw] md:w-[12vw] md:h-[12vw] justify-center items-center p-[2vw] rounded-[1vw] border-teal-700 hover:border-black dark:hover:border-white hover:scale-105 transition-all duration-400 bg-black/80">
+		<img
+			src={icon}
+			alt={`${label} icon`}
+			className="w-[10vw] h-[10vw] md:w-[6vw] md:h-[6vw] object-contain drop-shadow-lg transition-all duration-800 group-hover:contrast-[300%] group-hover:grayscale group-hover:brightness-[60%] dark:group-hover:invert group-hover:drop-shadow-[0_4px_6px_rgba(2,25,25,0.8)] dark:group-hover:drop-shadow-[0_4px_6px_rgba(255,255,255,0.8)]"
+		/>
+		<p className="text-[2.5vw] md:text-[1.5vw] text-nowrap text-black/40 group-hover:text-black dark:text-white/40 dark:group-hover:text-white transition-all duration-400">
+			{label}
+		</p>
+	</div>
 );
 
 const VerticalText = ({ text }) => (

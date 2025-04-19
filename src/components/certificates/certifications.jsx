@@ -26,7 +26,7 @@ const Certifications = () => {
 
 		{ name: "PowerBI Workshop", company: "~ HMRITM", image: PowerBI },
 		{ name: "AI for Beginners", company: "~ HP Life", image: AIBeg },
-		{ name: "Data Science & Analytics", company: "~ HP Life", image: DSA },
+		// { name: "Data Science & Analytics", company: "~ HP Life", image: DSA },
 		{
 			name: "Introduction To CyberSecurity",
 			company: "~ HP Life",
