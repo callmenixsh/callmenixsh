@@ -1,14 +1,23 @@
 import React from "react";
 import { FaRegShareFromSquare, FaCode } from "react-icons/fa6";
 import Typeraijin from "../../assets/content/typeraijin.mp4";
+import Velope from "../../assets/content/velope.mp4"
 
 // Array to store project data
 const projects = [
 	{
 		id: 1,
+		title: "TYPERAIJIN",
 		videoSrc: Typeraijin,
 		liveDemo: "https://typeraijin.netlify.app/",
 		repoLink: "https://github.com/callmenixsh/TypeRaijin",
+	},
+	{
+		id: 2,
+		title: "Velope",
+		videoSrc: Velope,
+		liveDemo: "https://velope.netlify.app/",
+		repoLink: "https://github.com/callmenixsh/Velope",
 	},
 ];
 
@@ -19,14 +28,16 @@ const MajorProject = () => {
 				Projects
 			</h1>
 
-			<div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-10 sm:mx-10  ">
+			<div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-10 sm:mx-10">
 				{projects.map((project) => (
 					<div
 						key={project.id}
 						className="w-[300px] sm:w-[400px] content bg-black/10 dark:bg-white/10 flex flex-col border-2 p-4 gap-4 rounded-xl items-center justify-center text-black dark:text-white border-black dark:border-white"
 					>
-						TYPERAIJIN
-						{/* Video Section */}
+						<div className="text-lg font-semibold underline underline-offset-2">
+							{project.title}
+						</div>
+
 						<video
 							className="h-[180px] w-[300px] sm:h-[250px] sm:w-[400px] object-cover bg-white rounded-xl border border-black dark:border-white"
 							muted
@@ -36,7 +47,7 @@ const MajorProject = () => {
 							<source src={project.videoSrc} type="video/mp4" />
 							Your browser does not support the video tag.
 						</video>
-						{/* Buttons Section */}
+
 						<div className="w-[300px] sm:w-[400px] px-4 flex flex-row gap-4 items-between justify-between">
 							<a
 								href={project.liveDemo}
