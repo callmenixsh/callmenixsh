@@ -13,7 +13,7 @@ const qualifications = [
 			url: "http://www.ipu.ac.in/",
 		},
 		status: "Pursuing",
-		resultUrl: "https://www.ipusenpai.in/student/35813302722",
+		resultUrl: "https://www.ipuranklist.com/student/35813302722",
 	},
 	{
 		title: "12th Standard (2021)",
