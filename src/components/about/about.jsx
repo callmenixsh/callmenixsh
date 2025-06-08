@@ -3,7 +3,7 @@ import { AiOutlineMessage } from "react-icons/ai";
 import { FaLinkedin, FaGithub, FaDownload } from "react-icons/fa";
 import { FaInstagram, FaXTwitter } from "react-icons/fa6";
 import { FiMail } from "react-icons/fi";
-import resume from "../../assets/content/cv.pdf";
+import resume from "../../assets/content/CV.pdf";
 const about = () => {
 	const buttonRef = useRef();
 

@@ -92,8 +92,8 @@ const Techstack = () => {
 					</div>
 
 					<div className="flex gap-[2vw]">
-						{/* <Card icon={mongodbIcon} label="MongoDB" />
-						<Card icon={expressIcon} label="ExpressJS" /> */}
+						<Card icon={mongodbIcon} label="MongoDB" />
+						<Card icon={expressIcon} label="ExpressJS" />
 						<Card icon={reactIcon} label="ReactJS" />
 						<Card icon={nodeIcon} label="NodeJS" />
 					</div>
