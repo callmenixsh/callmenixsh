@@ -6,7 +6,7 @@ import { FaInstagram, FaXTwitter } from "react-icons/fa6";
 import { FiMail } from "react-icons/fi";
 import confetti from "canvas-confetti";
 import "../helper.css";
-import resume from "../../assets/content/CV.pdf";
+import resume from "../../assets/content/resume.pdf";
 
 const Sidebar = () => {
 	const [isOpen, setIsOpen] = useState(false);

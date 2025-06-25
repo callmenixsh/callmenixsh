@@ -37,7 +37,6 @@ const EducationalQualifications = () => {
 		setIsOpen((prev) => !prev);
 	};
 
-	// Close the menu if clicked outside
 	useEffect(() => {
 		const handleClickOutside = (event) => {
 			if (menuRef.current && !menuRef.current.contains(event.target)) {

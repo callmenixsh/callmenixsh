@@ -3,7 +3,7 @@ import { AiOutlineMessage } from "react-icons/ai";
 import { FaLinkedin, FaGithub, FaDownload } from "react-icons/fa";
 import { FaInstagram, FaXTwitter } from "react-icons/fa6";
 import { FiMail } from "react-icons/fi";
-import resume from "../../assets/content/CV.pdf";
+import resume from "../../assets/content/resume.pdf";
 const about = () => {
 	const buttonRef = useRef();
 
@@ -43,9 +43,9 @@ const about = () => {
 							<ul className="text-sm sm:text-lg lg:text-xl transition-all duration-300">
 								What Im Upto right now :
 								<li className="text-xs sm:text-sm lg:text-lg transition-all duration-300">
-									- Currently i am working on multiple small projects to add to my profile.
+									- Currently i am working on multiple small projects.
 								</li>
-								<li className="text-xs sm:text-sm lg:text-lg transition-all duration-300">
+								{/* <li className="text-xs sm:text-sm lg:text-lg transition-all duration-300">
 									- Learning DSA on {" "}
 									<a
 										href="https://leetcode.com/u/callmenixsh/"
@@ -54,7 +54,7 @@ const about = () => {
 										leetcode
 									</a>{" "}
 									daily.
-								</li>
+								</li> */}
 								{/* <li className="sm:text-sm lg:text-lg">- I occasionally write <Link to="/blogs" className="underline text-teal-300">blogs</Link> about my journey</li> */}
 							</ul>
 						</div>
