@@ -1,4 +1,4 @@
-<h1 align="center">Hi 👋, I'm <a href="https://callmenixsh.github.io/callmenixsh/">Nishant</a></h1>
+<h1 align="center">Hi 👋, I'm <a href="https://callmenixsh.netlify.app/">Nishant</a></h1>
 <h3 align="center">I am a Web Developer currently pursuing my B-Tech degree</h3>
 
 - 🌲Check out my [Portfolio](https://callmenixsh.netlify.app/)
