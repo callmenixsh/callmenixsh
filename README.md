@@ -1,9 +1,8 @@
-<h1 align="center">Hi 👋, I'm <a href="https://callmenixsh.github.io/callmenixsh/">Nishant</a></h1>
+<h1 align="center">Hi 👋, I'm <a href="https://callmenixsh.netlify.app/">Nishant</a></h1>
 <h3 align="center">I am a Web Developer currently pursuing my B-Tech degree</h3>
 
 - 🌲Check out my [Portfolio](https://callmenixsh.netlify.app/)
 - 💮 I'm currently learning Fullstack
-- 🌱 My first fullstack Project [TypeRaijin](https://typeraijin.netlify.app/)
 - 💻 Connect with me on [Linkedin](https://www.linkedin.com/in/callmenixsh/)
 
 <p align="center"> <img src="https://komarev.com/ghpvc/?username=callmenixsh&style=for-the-badge&label=Visits&abbreviated=true&color=5e81ac&" alt="callmenixsh" /> </p>
