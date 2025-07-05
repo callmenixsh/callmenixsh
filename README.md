@@ -5,9 +5,11 @@
   💼 Reach out on <a href="mailto:callmenixsh@gmail.com" target="_blank" rel="noopener noreferrer">callmenixsh@gmail.com</a>
 </p>
 <p align="center"> 
-<img align="center" src="https://komarev.com/ghpvc/?username=callmenixsh&style=for-the-badge&label=Visits&color=5e81ac&" alt="callmenixsh" width="135" /> 
 <a align="center" href="https://takeuforward.org/plus/profile/callmenixsh">
   <img align="center" src="https://github.com/callmenixsh/callmenixsh/blob/main/src/assets/logos/portfoliobadge.png" width="100" style="border:none;" />
+</a>
+<a align="center" href="https://takeuforward.org/plus/profile/callmenixsh">
+<img align="center" src="https://komarev.com/ghpvc/?username=callmenixsh&style=for-the-badge&label=Visits&color=5e81ac&" alt="callmenixsh" width="135" /> 
 </a>
 </p>
 
