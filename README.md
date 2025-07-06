@@ -32,5 +32,7 @@
 
 ---
 <p align="center">
-<img align="center" src="https://github-readme-tech-stack.vercel.app/api/cards?align=center&titleAlign=center&showBorder=false&lineHeight=3&lineCount=4&theme=nord&width=400&bg=%232a313e&badge=%23343C4D&border=%23343C4D&titleColor=%2382a2c2&line1=html5%2Chtml5%2CE34F26%3Bcss3%2Ccss%2C1572B6%3Bjavascript%2Cjavascript%2CF7DF1E%3B&line2=framer%2Cframer%2C0055FF%3Bfigma%2Cfigma%2CF24E1E%3Bbootstrap%2Cbootstrap%2C7952B3%3B&line3=express%2Cexpress%2Cffffff%3Breact%2Creact%2C61DAFB%3Bnodedotjs%2Cnode.js%2C5FA04E%3B&line4=cplusplus%2Cc%2B%2B%2C00599C%3Bmysql%2Cmysql%2C4479A1%3Bgit%2Cgit%2CF05032%3B" alt="My Tech Stack"/>
+<img align="center" src="https://github-readme-tech-stack.vercel.app/api/cards?align=center&titleAlign=center&showBorder=false&lineHeight=1&lineCount=4&theme=bearded&width=400&line1=react%2Creact%2C61DAFB%3Btailwindcss%2Ctailwindcss%2C06B6D4%3Bjavascript%2Cjavascript%2CF7DF1E%3B&line2=node.js%2Cnode.js%2C339933%3Bexpress%2Cexpress.js%2Cffffff%3Bmongodb%2Cmongodb%2C47A248%3B&line3=socketdotio%2Csocket.io%2C010101%3Bframer%2Cframer%2C0055FF%3Bgsap%2cgsap%2C47A248%3B&line4=cplusplus%2Cc%2B%2B%2C00599C%3Bgit%2Cgit%2CF05032%3B" alt="My Tech Stack"/>
+<img align="center" src="https://github-readme-tech-stack.vercel.app/api/cards?title=Tools%20I%20Use&align=center&titleAlign=center&showBorder=false&lineHeight=2&lineCount=2&theme=bearded&width=320&line1=figma%2Cfigma%2CF24E1E%3Bvscode%2Cvs%20code%2C007ACC%3Bmongodb%2catlas%2C47A248%3B&line2=github%2Cgithub%2C181717%3Bnetlify%2Cnetlify%2C00C7B7%3Brender%2Crender%2C46E3B7%3B" alt="Tools I Use"/>
 </p>
+
