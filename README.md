@@ -25,9 +25,6 @@
   <a href="https://www.linkedin.com/in/callmenixsh/">
     <img align="center" src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" width="90" style="border:none;" />
   </a>
-  <a href="https://x.com/callmenixsh">
-    <img  align="center" src="https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white" width="55" style="border:none;" />
-  </a>
 </p>
 
 ---
