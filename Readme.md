@@ -16,7 +16,7 @@
 
 
 <p align="center">  
-  <a  href="https://takeuforward.org/plus/profile/callmenixsh">
+  <a  href="https://takeuforward.org/profile/callmenixsh">
     <img align="center" src="https://github.com/callmenixsh/callmenixsh/blob/main/assets/tuf.png" width="95" style="border:none;" />
   </a>
   <a href="https://leetcode.com/callmenixsh">
