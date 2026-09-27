@@ -1,15 +1,12 @@
 
-<h1 align="center">Hi 👋, I'm Nishant</h1>
-<p align="center"><i>callmenixsh on the web 🌐</i></p>
+<h1 align="center">Hi, I'm Nishant</h1>
+<p align="center"><i><b><a href="https://callmenixsh.netlify.app/">callmenixsh</a></b> on the web </i></p>
 <p align="center">
-  💼 Reach out on <a href="mailto:callmenixsh@gmail.com" target="_blank" rel="noopener noreferrer">callmenixsh@gmail.com</a>
+   Reach out at <a href="mailto:callmenixsh@gmail.com" target="_blank" rel="noopener noreferrer">callmenixsh@gmail.com</a>
 </p>
 <p align="center"> 
 <a align="center" href="https://callmenixsh.netlify.app/">
-  <img align="center" src="https://github.com/callmenixsh/callmenixsh/blob/main/assets/portfoliobadge.png" width="100" style="border:none;" />
-</a>
-<a align="center" href="https://callmenixsh.netlify.app/">
-<img align="center" src="https://komarev.com/ghpvc/?username=callmenixsh&style=for-the-badge&label=Visits&color=blueviolet&" alt="callmenixsh" width="135" /> 
+<img align="center" src="https://komarev.com/ghpvc/?username=callmenixsh&style=for-the-badge&label=Profile%20Views&color=blueviolet&" alt="callmenixsh" width="185" /> 
 </a>
 </p>
 
@@ -28,3 +25,23 @@
 </p>
 
 ---
+
+<h3 align="left"> HIGHLIGHTED PROJECTS</h2>
+
+<ul>
+  <li>
+    <b><a href="https://callmenixsh.netlify.app/">Portfolio</a></b>: Personal portfolio showcasing my work, experience, projects & skills.
+  </li>
+  <li>
+    <b><a href="https://github.com/callmenixsh/crossDSA/releases/tag/1.0.2">crossDSA</a></b>: Chrome extension that finds the same or similar DSA problems across LeetCode, GFG, Codeforces, CodeChef & TakeUForward.
+  </li>
+  <li>
+    <b><a href="https://crossprofiles.vercel.app/">crossProfiles</a></b>: Unified developer profile aggregating coding activity.
+  </li>
+  <li>
+    <b><a href="https://dorofi.netlify.app/">Dorofi</a></b>: Social Pomodoro app for focused work, friends & leaderboards.
+  </li>
+  <li>
+    <b><a href="https://visteria.vercel.app/">Visteria</a></b>: Dashboard for tracking and managing my project-site visits.
+  </li>
+</ul>
