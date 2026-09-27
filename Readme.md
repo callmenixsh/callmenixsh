@@ -1,6 +1,6 @@
 
 <h1 align="center">Hi, I'm Nishant</h1>
-<p align="center"><i><b><a href="https://callmenixsh.netlify.app/">callmenixsh</a></b> on the web </i></p>
+<p align="center"><b><i>callmenixsh</i></b> on the web </p>
 <p align="center">
    Reach out at <a href="mailto:callmenixsh@gmail.com" target="_blank" rel="noopener noreferrer">callmenixsh@gmail.com</a>
 </p>
